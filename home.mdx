@@ -20,7 +20,7 @@ mode: "custom"
     <a href="/how-it-works" className="vy-card vy-side-card bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 text-gray-900 dark:text-zinc-50">
       <svg className="vy-mark-wm" viewBox="13.5 9 22 31.5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.5951 39.4589C15.3571 39.4589 14.1941 38.2659 14.1941 35.8529V25.4269C14.1941 23.2919 15.1211 22.1149 16.8881 21.8789V18.3749C16.8881 12.9419 20.4811 10.1289 24.5001 10.1289C28.5211 10.1289 32.1131 12.9419 32.1131 18.3749V21.8799C33.8791 22.1149 34.7921 23.2919 34.7921 25.4269V35.8509C34.7921 38.2659 33.6291 39.4589 31.3901 39.4589H17.5951ZM19.6421 18.1099V21.8349H29.3591V18.1099C29.3591 14.6649 27.1211 12.7799 24.5001 12.7799C21.8641 12.7799 19.6421 14.6649 19.6421 18.1099ZM18.0211 36.8239H30.9781C31.5971 36.8239 31.9361 36.4559 31.9361 35.7479V25.5299C31.9361 24.8239 31.5971 24.4709 30.9781 24.4709H18.0221C17.4191 24.4709 17.0501 24.8229 17.0501 25.5299V35.7479C17.0501 36.4559 17.4181 36.8239 18.0221 36.8239H18.0211Z" fill="currentColor"/><path d="M24.5001 30.7099C23.5631 30.7099 22.7691 29.8739 22.7691 28.8079C22.7691 27.7599 23.5671 26.9399 24.5001 26.9399C25.4321 26.9399 26.2301 27.7439 26.2301 28.7989C26.2301 29.8739 25.4411 30.7099 24.5001 30.7099ZM21.6401 34.7009C21.1591 34.7009 20.8711 34.4729 20.8711 34.0949C20.8711 32.9909 22.2711 31.4709 24.5001 31.4709C26.7231 31.4709 28.1281 32.9909 28.1281 34.0949C28.1281 34.4719 27.8371 34.7009 27.3551 34.7009H21.6401Z" fill="currentColor"/></svg>
       <span className="vy-side-arrow"><Icon icon="arrow-up-right" iconType="regular" size={22} /></span>
-      <span className="vy-card-title">See how HumanCheck protects surveys</span>
+      <span className="vy-card-title">See how HumanCheck protects studies</span>
     </a>
 
   </div>
@@ -35,7 +35,7 @@ mode: "custom"
       <div className="vy-car-glow"></div>
       <div id="sl1" className="vy-car-slide" data-pos="0">
         <span className="vy-num vy-car-num">1</span>
-        <p className="vy-sp-text text-gray-900 dark:text-zinc-50">Each verified respondent receives a one-time passcode, created for their face alone and dropped onto their link. It fills itself in at your survey's gate.</p>
+        <p className="vy-sp-text text-gray-900 dark:text-zinc-50">Each verified respondent receives a one-time passcode, created for their face alone and dropped onto their link. It fills itself in at your study's gate.</p>
         <div className="vy-viz">
           <div className="vy-viz-head"><span className="vy-viz-headico"><Icon icon="lock" iconType="light" size={13} /></span>One-time passcode</div>
           <div className="vy-viz-field"><span className="vy-viz-code">vyp_k2•••••••4qt</span><span className="vy-viz-check"><Icon icon="circle-check" iconType="light" size={16} /></span></div>
@@ -49,7 +49,7 @@ mode: "custom"
           <div className="vy-viz-lane">
             <span className="vy-viz-ico"><Icon icon="user" iconType="light" size={17} /></span>
             <svg className="vy-viz-arrow" viewBox="0 0 64 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 8 h52" stroke="currentColor" strokeWidth="1.5" /><path d="M48 3 L56 8 L48 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
-            <span className="vy-viz-out vy-viz-pass"><span className="vy-viz-outico"><Icon icon="check" iconType="light" size={13} /></span>Into the survey</span>
+            <span className="vy-viz-out vy-viz-pass"><span className="vy-viz-outico"><Icon icon="check" iconType="light" size={13} /></span>Into the study</span>
           </div>
           <div className="vy-viz-lane">
             <span className="vy-viz-ico"><Icon icon="robot" iconType="light" size={17} /></span>
@@ -75,7 +75,7 @@ mode: "custom"
       <div className="vy-car-prog"><span id="vyprog"></span></div>
     </div>
     <div className="vy-car-nav">
-      <img src="/logo/light.svg?v=autoplay" alt="" style={{ display: 'none' }} onLoad={() => { if (window.__vyAuto) return; window.__vyAuto = true; if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return; let prog = 0; let paused = false; const car = document.querySelector('.vy-car'); if (!car) return; car.addEventListener('mouseenter', () => { paused = true; }); car.addEventListener('mouseleave', () => { paused = false; }); document.addEventListener('click', (e) => { if (e.target && e.target.closest && e.target.closest('.vy-car-arrow, .vy-st')) prog = 0; }, true); setInterval(() => { const bar = document.getElementById('vyprog'); if (!bar) return; if (paused || document.hidden) return; prog += 50 / 7000; if (prog >= 1) { prog = 0; const btns = document.querySelectorAll('.vy-car-arrow'); if (btns[1]) btns[1].click(); } bar.style.width = String(Math.min(prog * 100, 100)) + '%'; }, 50); }} />
+      <img src="/logo/light.svg?v=autoplay" alt="" style={{ display: 'none' }} onLoad={() => { if (window.__vyAuto) return; window.__vyAuto = true; if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return; let prog = 0; let paused = false; document.addEventListener('pointerover', (e) => { const inCar = e.target && e.target.closest && e.target.closest('.vy-car'); if (inCar && !paused) { paused = true; const b = document.getElementById('vyprog'); if (b) b.style.opacity = '0.35'; } else if (!inCar && paused) { paused = false; const b = document.getElementById('vyprog'); if (b) b.style.opacity = '1'; } }); document.addEventListener('click', (e) => { if (e.target && e.target.closest && e.target.closest('.vy-car-arrow, .vy-st')) prog = 0; }, true); setInterval(() => { const bar = document.getElementById('vyprog'); if (!bar) return; if (paused || document.hidden) return; prog += 50 / 7000; if (prog >= 1) { prog = 0; const btns = document.querySelectorAll('.vy-car-arrow'); if (btns[1]) btns[1].click(); } bar.style.width = String(Math.min(prog * 100, 100)) + '%'; }, 50); }} />
       <button className="vy-car-arrow" aria-label="Previous stage" onClick={() => { const s = Array.from(document.querySelectorAll('.vy-car-slide')); for (const el of s) el.setAttribute('data-pos', String((parseInt(el.getAttribute('data-pos'), 10) + 1) % 3)); for (const el of document.querySelectorAll('.vy-st')) el.classList.remove('vy-on'); const f = s.find((el) => el.getAttribute('data-pos') === '0'); document.getElementById('st' + f.id.slice(2)).classList.add('vy-on'); }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="m15 5-7 7 7 7" /></svg></button>
       <button className="vy-car-arrow" aria-label="Next stage" onClick={() => { const s = Array.from(document.querySelectorAll('.vy-car-slide')); for (const el of s) el.setAttribute('data-pos', String((parseInt(el.getAttribute('data-pos'), 10) + 2) % 3)); for (const el of document.querySelectorAll('.vy-st')) el.classList.remove('vy-on'); const f = s.find((el) => el.getAttribute('data-pos') === '0'); document.getElementById('st' + f.id.slice(2)).classList.add('vy-on'); }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="m9 5 7 7-7 7" /></svg></button>
     </div>
@@ -120,9 +120,9 @@ mode: "custom"
 
 <div className="max-w-7xl mx-auto px-6 mt-20">
 
-  <p className="vy-kicker">How it works</p>
+  <p className="vy-kicker">HumanCheck on Alchemer</p>
 
-  <h2 className="mt-2 text-2xl font-semibold text-gray-900 dark:text-zinc-50">Protect your survey</h2>
+  <h2 className="mt-2 text-2xl font-semibold text-gray-900 dark:text-zinc-50">Protect your study</h2>
 
   <p className="mt-2 text-gray-500 dark:text-zinc-400 max-w-3xl">A one-time password per verified human, enforced by Alchemer's own gate before your first question.</p>
 
@@ -135,9 +135,9 @@ mode: "custom"
         <div className="vy-jbody">
           <div className="vy-jtitle text-gray-900 dark:text-zinc-50">Create</div>
           <div className="vy-jgrid">
-            <a className="vy-jbox text-gray-900 dark:text-zinc-50" href="/setup#create-a-verification-and-paste-your-survey-link"><span className="vy-jbox-ico"><Icon icon="circle-plus" iconType="light" size={15} /></span>Create your verification</a>
-            <a className="vy-jbox text-gray-900 dark:text-zinc-50" href="/setup#create-a-verification-and-paste-your-survey-link"><span className="vy-jbox-ico"><Icon icon="link" iconType="light" size={15} /></span>Copy your study link</a>
-            <a className="vy-jbox text-gray-900 dark:text-zinc-50" href="/setup#create-a-verification-and-paste-your-survey-link"><span className="vy-jbox-ico"><Icon icon="key" iconType="light" size={15} /></span>Copy your passwords</a>
+            <a className="vy-jbox text-gray-900 dark:text-zinc-50" href="/setup#create-a-verification-and-paste-your-alchemer-link"><span className="vy-jbox-ico"><Icon icon="circle-plus" iconType="light" size={15} /></span>Create your verification</a>
+            <a className="vy-jbox text-gray-900 dark:text-zinc-50" href="/setup#create-a-verification-and-paste-your-alchemer-link"><span className="vy-jbox-ico"><Icon icon="link" iconType="light" size={15} /></span>Copy your study link</a>
+            <a className="vy-jbox text-gray-900 dark:text-zinc-50" href="/setup#create-a-verification-and-paste-your-alchemer-link"><span className="vy-jbox-ico"><Icon icon="key" iconType="light" size={15} /></span>Copy your passwords</a>
           </div>
         </div>
       </div>
@@ -145,7 +145,7 @@ mode: "custom"
       <div className="vy-jstage">
         <div className="vy-jnum bg-white dark:bg-black">2</div>
         <div className="vy-jbody">
-          <div className="vy-jtitle text-gray-900 dark:text-zinc-50">Gate your survey</div>
+          <div className="vy-jtitle text-gray-900 dark:text-zinc-50">Gate your study</div>
           <div className="vy-jgrid">
             <a className="vy-jbox text-gray-900 dark:text-zinc-50" href="/setup#add-your-passwords-to-alchemer"><span className="vy-jbox-ico"><Icon icon="lock" iconType="light" size={15} /></span>Add the password gate</a>
             <a className="vy-jbox text-gray-900 dark:text-zinc-50" href="/setup#add-your-passwords-to-alchemer"><span className="vy-jbox-ico"><Icon icon="paste" iconType="light" size={15} /></span>Paste your passwords</a>
@@ -186,25 +186,25 @@ mode: "custom"
 
 <AccordionGroup>
   <Accordion title="Will it hurt my completion rate?">
-    The check takes a few seconds, once. Verified respondents land in your survey with the password already filled in, so there is nothing to type and nothing to remember. Most of what a check turns away is the traffic you did not want anyway.
+    The check takes a few seconds, once. Verified respondents land in your study with the password already filled in, so there is nothing to type and nothing to remember. Most of what a check turns away is the traffic you did not want anyway.
   </Accordion>
   <Accordion title="What does it cost?">
     About one to two cents a verification, charged once per human. On a \$10,000 sample of \$3 to \$7 completes, the whole check is a rounding error, and one caught repeat taker pays for hundreds of verifications.
   </Accordion>
   <Accordion title="Do I pay for people who get blocked?">
-    No. A blocked respondent never receives a password, never reaches your survey, and never becomes a complete. Nothing to pay, nothing to clean out of your data.
+    No. A blocked respondent never receives a password, never reaches your study, and never becomes a complete. Nothing to pay, nothing to clean out of your data.
   </Accordion>
   <Accordion title="Can someone share the link or a password?">
     Sharing gets them nothing. Each password works exactly once, so a forwarded link carries a spent password, and the same face can never earn a second one for the same study. See [why it works](/how-it-works).
   </Accordion>
   <Accordion title="Do I ever see the respondent's face or personal information?">
-    No. No photo is shared with you or with Alchemer, only a yes or no. Your survey receives a verdict and a password, never a face, a name, or contact details.
+    No. No photo is shared with you or with Alchemer, only a yes or no. Your study receives a verdict and a password, never a face, a name, or contact details.
   </Accordion>
   <Accordion title="Does this replace my attention checks?">
     No, and it is not trying to. It proves the person is real and unique, not that they answered carefully. Keep your speeder and attention checks; this closes the door they cannot close.
   </Accordion>
   <Accordion title="When exactly does a password count as used?">
-    A password is spent the moment it opens your survey's gate, not at completion. If someone starts your survey and abandons it, that password is gone, and because the check recognizes their face, they simply receive a fresh one on their next visit. Honest respondents are never locked out of a study they never finished.
+    A password is spent the moment it opens your study's gate, not at completion. If someone starts your study and abandons it, that password is gone, and because the check recognizes their face, they simply receive a fresh one on their next visit. Honest respondents are never locked out of a study they never finished.
   </Accordion>
 </AccordionGroup>
 
