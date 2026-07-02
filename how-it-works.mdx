@@ -6,22 +6,15 @@ icon: "lock"
 
 <a className="vy-next" href="/setup"><span className="vy-next-step">2 of 5</span><span className="vy-next-label">Next: Researcher setup</span><span className="vy-next-arrow"><Icon icon="arrow-right" iconType="light" size={14} /></span></a>
 
-The whole system rests on one idea: **every password is tied to one unique human and works exactly once.** Everything else is plumbing. This page is the plumbing, explained honestly.
+One idea holds the whole thing up: **every password is tied to one unique human and works exactly once.**
 
 ## One password, one human, one use
 
-Think of each password as a claim ticket. We mint it, we record it, and we only hand it to a person who just proved two things on camera: they are **live** (a real person present right now, not a photo, a replay, or a generated face) and they are **unique** (a face we have not already seen for this study).
+Each password is a claim ticket. We only hand one to a person who just proved, on camera, that they are **live** and **unique**. Your survey enforces the ticket with Alchemer's own <a href="https://help.alchemer.com/help/login-password-action">Login/Password action</a>, set to individual one-time passwords that deactivate after use. Alchemer's feature, Alchemer's wording.
 
-Your survey does not have to trust us on any of that. It enforces the ticket with Alchemer's own <a href="https://help.alchemer.com/help/login-password-action">Login/Password action</a>, set to **individual one-time passwords that deactivate after use**. That is Alchemer's feature and Alchemer's wording. Their server checks the password before page one, and a used password is refused, full stop.
+So every cheap trick fails: a shared link carries a spent password, a guessed password does not exist, a bot never earns one, and the same face can never get a second one for the same study, on any device.
 
-So the gate holds against every cheap trick:
-
-- **A shared link** carries a password that was already spent the first time it was used. Dead on arrival.
-- **A guessed password** does not exist. Only we mint them, and they are random and single-use.
-- **A second attempt** fails upstream, before Alchemer: the same face cannot earn a second password for the same study, no matter the device, browser, or phone number.
-- **A bot** never gets a password at all, because a replay or generated face fails the liveness scan.
-
-The honest limit: a real, unique human who rushes your survey is still a real, unique human. The check proves who they are, not how carefully they answer, so keep your speeder and attention checks. It replaces the trap question's fraud-catching job, not its attention-catching job.
+One honest limit: the check proves who they are, not how carefully they answer. Keep your speeder and attention checks.
 
 ## The verified column
 
@@ -40,11 +33,11 @@ Every response in your export carries the check, and you can compare groups the 
 
 ## What it costs
 
-About one to two cents a verification, charged once per human, so returning respondents never count again. On a $10,000 sample of $3 to $7 completes, the whole check is a rounding error. Compare that to what a single bad complete costs you: the incentive, the sample fee, and the analyst time spent wondering whether to trust the row.
+About one to two cents a verification, charged once per human, so returning respondents never count again. On a \$10,000 sample of \$3 to \$7 completes, the whole check is a rounding error. Compare that to what a single bad complete costs you: the incentive, the sample fee, and the analyst time spent wondering whether to trust the row.
 
 ## What we never touch
 
-No photo is shared with you or with Alchemer, only a yes or no. Your survey receives a verdict and a password, never a face, a name, or personal information. We act as the broker in the middle: respondents share the scan with us, and all your study ever learns is "this is a real, unique human."
+No photo is shared with you or with Alchemer, only a yes or no. Your study receives a verdict and a password, never a face, a name, or personal information.
 
 ## Two things we confirm live
 

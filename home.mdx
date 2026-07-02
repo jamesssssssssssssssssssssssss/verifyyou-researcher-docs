@@ -13,13 +13,31 @@ mode: "custom"
 
       <p className="mt-4 text-lg text-gray-500 dark:text-zinc-400">A quick face check before your first question. In about five seconds it proves your respondent is live and unique, without ever storing their image; your survey only sees a yes or no. About two cents a verification, no code, and it is the strongest, cheapest signal on verified sample there is. The doubt about who is really answering goes away.</p>
 
-      <div className="vy-hero-list mt-7">
-        <div className="vy-hl-row"><span className="vy-num">1</span><span className="text-gray-900 dark:text-zinc-50">Each verified respondent receives a one-time passcode.</span></div>
-        <div className="vy-hl-row"><span className="vy-num">2</span><span className="text-gray-900 dark:text-zinc-50">Bots and returning humans get locked out.</span></div>
-        <div className="vy-hl-row"><span className="vy-num">3</span><span className="text-gray-900 dark:text-zinc-50">You only pay for real, first-time respondents.</span></div>
-        <div className="vy-hl-row"><span className="vy-num">4</span><span className="text-gray-900 dark:text-zinc-50">Less time reconciling data, and no spend on illegitimate responses.</span></div>
-      </div>
+  </div>
 
+  <div className="vy-stepper mt-10">
+    <div className="vy-st-row">
+      <button id="st1" className="vy-st on" onClick={() => { for (const el of document.querySelectorAll('.vy-sp')) el.classList.remove('on'); for (const el of document.querySelectorAll('.vy-st')) el.classList.remove('on'); document.getElementById('sp1').classList.add('on'); document.getElementById('st1').classList.add('on'); }}><span className="vy-num">1</span><span className="vy-st-label">A passcode per human</span></button>
+      <button id="st2" className="vy-st" onClick={() => { for (const el of document.querySelectorAll('.vy-sp')) el.classList.remove('on'); for (const el of document.querySelectorAll('.vy-st')) el.classList.remove('on'); document.getElementById('sp2').classList.add('on'); document.getElementById('st2').classList.add('on'); }}><span className="vy-num">2</span><span className="vy-st-label">Fakes locked out</span></button>
+      <button id="st3" className="vy-st" onClick={() => { for (const el of document.querySelectorAll('.vy-sp')) el.classList.remove('on'); for (const el of document.querySelectorAll('.vy-st')) el.classList.remove('on'); document.getElementById('sp3').classList.add('on'); document.getElementById('st3').classList.add('on'); }}><span className="vy-num">3</span><span className="vy-st-label">Pay only for real</span></button>
+      <button id="st4" className="vy-st" onClick={() => { for (const el of document.querySelectorAll('.vy-sp')) el.classList.remove('on'); for (const el of document.querySelectorAll('.vy-st')) el.classList.remove('on'); document.getElementById('sp4').classList.add('on'); document.getElementById('st4').classList.add('on'); }}><span className="vy-num">4</span><span className="vy-st-label">Cleaner data</span></button>
+    </div>
+      <div id="sp1" className="vy-sp on">
+        <p className="vy-sp-text text-gray-900 dark:text-zinc-50">Each verified respondent receives a one-time passcode, minted for their face alone and dropped onto their link. It fills itself in at your survey's gate.</p>
+        <img className="vy-sp-img" src="/images/mock-create.png" alt="Your study link and one-time passwords" />
+      </div>
+      <div id="sp2" className="vy-sp">
+        <p className="vy-sp-text text-gray-900 dark:text-zinc-50">Bots and returning humans get locked out. A duplicate face never earns a second passcode, and a spent passcode is dead forever.</p>
+        <img className="vy-sp-img vy-sp-phone" src="/images/screen-denied.png" alt="A blocked respondent" />
+      </div>
+      <div id="sp3" className="vy-sp">
+        <p className="vy-sp-text text-gray-900 dark:text-zinc-50">You only pay for real, first-time respondents. Blocked traffic never becomes a complete, never enters your data, and never gets paid.</p>
+        <img className="vy-sp-img" src="/images/vy-real-activity-log.png" alt="The activity log" />
+      </div>
+      <div id="sp4" className="vy-sp">
+        <p className="vy-sp-text text-gray-900 dark:text-zinc-50">Less time reconciling data, and no spend on illegitimate responses. Every row in your export carries the check.</p>
+        <img className="vy-sp-img" src="/images/alchemer-urlvar-exports.png" alt="The verified column in your export" />
+      </div>
   </div>
 </div>
 
@@ -126,7 +144,7 @@ mode: "custom"
     The check takes a few seconds, once. Verified respondents land in your survey with the password already filled in, so there is nothing to type and nothing to remember. Most of what a check turns away is the traffic you did not want anyway.
   </Accordion>
   <Accordion title="What does it cost?">
-    About one to two cents a verification, charged once per human. On a $10,000 sample of $3 to $7 completes, the whole check is a rounding error, and one caught repeat taker pays for hundreds of verifications.
+    About one to two cents a verification, charged once per human. On a \$10,000 sample of \$3 to \$7 completes, the whole check is a rounding error, and one caught repeat taker pays for hundreds of verifications.
   </Accordion>
   <Accordion title="Do I pay for people who get blocked?">
     No. A blocked respondent never receives a password, never reaches your survey, and never becomes a complete. Nothing to pay, nothing to clean out of your data.

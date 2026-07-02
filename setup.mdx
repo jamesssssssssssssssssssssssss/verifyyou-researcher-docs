@@ -6,13 +6,14 @@ icon: "sliders"
 
 <a className="vy-next" href="/respondent-flow"><span className="vy-next-step">3 of 5</span><span className="vy-next-label">Next: The respondent experience</span><span className="vy-next-arrow"><Icon icon="arrow-right" iconType="light" size={14} /></span></a>
 
-Four steps, two tools, about fifteen minutes. Once per study, no code anywhere.
-
-<Note>
-**Before you start:** build your survey in Alchemer as you normally would, with one difference. Leave **page 1 empty**, your questions start on page 2. Page 1 is where the gate goes.
-</Note>
+Five steps, two tools, about fifteen minutes. Once per study, no code anywhere.
 
 <Steps>
+  <Step title="Create your survey" icon="pen-to-square">
+    Build your survey in Alchemer exactly as you normally would, with one difference: leave **page 1 empty**. Your questions start on page 2, and page 1 is where the gate goes.
+
+    **You now have:** a normal Alchemer survey with an empty first page.
+  </Step>
   <Step title="Create a verification and paste your survey link" icon="circle-plus">
     In the VerifyYou dashboard: click **New verification**, name the study, and pick **Alchemer** under "Where does your survey live?". That choice is how we know to mint one-time passwords, the credential Alchemer's own gate understands. Paste your Alchemer survey link and click **Create verification**.
 
@@ -43,7 +44,7 @@ Four steps, two tools, about fifteen minutes. Once per study, no code anywhere.
     </Frame>
   </Step>
   <Step title="Share your study link" icon="share-nodes">
-    Paste the study link from step 1 into your panel, your sample provider, or your invite email.
+    Paste the study link from step 2 into your panel, your sample provider, or your invite email.
 
     **You now have:** a fielded study where everyone who reaches your survey came through the check. That's the whole setup.
   </Step>
@@ -54,7 +55,7 @@ Four steps, two tools, about fifteen minutes. Once per study, no code anywhere.
 No real study needed. Make up a survey, put the gate in front of it, and try to beat it yourself.
 
 <Steps>
-  <Step title="Set it up">Steps 1 through 4 above, on a made-up survey. About fifteen minutes of clicking.</Step>
+  <Step title="Set it up">Steps 1 through 5 above, on a made-up survey. About fifteen minutes of clicking.</Step>
   <Step title="Try to beat it">Take the survey through the study link; it just works. Try to take it again, and you can't. Try the raw Alchemer URL with no password, and you get nothing.</Step>
   <Step title="Check the ledger">Export the CSV and see the verified column against your response IDs. That comparison, run by you and not by us, is worth more than anything we could say.</Step>
 </Steps>

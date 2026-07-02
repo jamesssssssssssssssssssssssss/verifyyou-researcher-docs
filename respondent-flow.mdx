@@ -6,7 +6,7 @@ icon: "mobile-screen"
 
 <a className="vy-next" href="/any-platform"><span className="vy-next-step">4 of 5</span><span className="vy-next-label">Next: The same mechanism, any platform</span><span className="vy-next-arrow"><Icon icon="arrow-right" iconType="light" size={14} /></span></a>
 
-Five steps, a few seconds, one screen at a time. Every screen below is the real product unless marked otherwise.
+Two steps, then a fork: pass or fail. One screen at a time; every screen is the real product unless marked otherwise.
 
 <Steps>
   <Step title="They click your study link" icon="hand-pointer">
@@ -23,41 +23,29 @@ Five steps, a few seconds, one screen at a time. Every screen below is the real 
       <img className="vy-phone" src="/images/screen-scan2.png" alt="The face scan" style={{ maxWidth: '300px' }} />
     </Frame>
   </Step>
-  <Step title="They pass" icon="circle-check">
-    Live and unique, confirmed.
-
-    <Frame caption="Real product. Complete, thank you for being human.">
-      <img className="vy-phone" src="/images/screen-pass.png" alt="The complete screen" style={{ maxWidth: '300px' }} />
-    </Frame>
-  </Step>
-  <Step title="The gate is already open" icon="unlock">
-    They land on your Alchemer login page with their one-time password filled in. Nothing to type.
-
-    <Frame caption="Illustration. The real page inherits your own survey theme. This is the one screen still in design.">
-      <img className="vy-phone" src="/images/screen-gate.png" alt="Alchemer login page pre-filled" style={{ maxWidth: '300px' }} />
-    </Frame>
-  </Step>
-  <Step title="They answer your questions" icon="list-check">
-    From here it is just your survey. The whole detour took a few seconds, and every response behind the gate is a real, unique human.
-  </Step>
 </Steps>
 
-## When someone gets blocked
+## The fork: pass or fail
 
-Two ways to fail the check. Both end the same way: no password, no survey, no complete, nothing to pay.
+The scan ends one of two ways, and both are instant.
 
 <div className="grid md:grid-cols-2 gap-5 mt-6">
-  <div>
-    <img className="vy-phone" src="/images/screen-denied.png" alt="Denied screen" style={{ maxWidth: '300px', margin: '0 auto', display: 'block' }} />
-    <p className="mt-3 text-sm text-gray-500 dark:text-zinc-400 text-center"><b className="text-gray-900 dark:text-zinc-50">Not unique.</b> A face we have already seen for this study. Your repeat taker. <i>(Real product.)</i></p>
+  <div className="border border-gray-200 dark:border-zinc-800 rounded-xl p-6 bg-gray-50 dark:bg-zinc-900">
+    <p className="font-semibold text-gray-900 dark:text-zinc-50"><Icon icon="circle-check" iconType="light" size={16} /> They pass</p>
+    <img className="vy-phone mt-4" src="/images/screen-pass.png" alt="The success screen" style={{ maxWidth: '260px', margin: '1rem auto 0', display: 'block' }} />
+    <p className="mt-4 text-sm text-gray-500 dark:text-zinc-400">Live and unique. They are sent straight on to your Alchemer login page with their one-time password already filled in, then your questions. <i>(Real product, demo partner brand.)</i></p>
   </div>
-  <div>
-    <img className="vy-phone" src="/images/screen-liveness.png" alt="Liveness failure screen" style={{ maxWidth: '300px', margin: '0 auto', display: 'block' }} />
-    <p className="mt-3 text-sm text-gray-500 dark:text-zinc-400 text-center"><b className="text-gray-900 dark:text-zinc-50">Not live.</b> A replay, a photo, or a generated face. Real people in bad lighting get a retry; bots do not. <i>(Real product.)</i></p>
+  <div className="border border-gray-200 dark:border-zinc-800 rounded-xl p-6 bg-gray-50 dark:bg-zinc-900">
+    <p className="font-semibold text-gray-900 dark:text-zinc-50"><Icon icon="circle-xmark" iconType="light" size={16} /> They fail</p>
+    <img className="vy-phone mt-4" src="/images/screen-denied.png" alt="Denied screen" style={{ maxWidth: '260px', margin: '1rem auto 0', display: 'block' }} />
+    <p className="mt-4 text-sm text-gray-500 dark:text-zinc-400">A duplicate face, a replay, or a bot. No password, no survey, no complete, nothing to pay. They are routed to your panel's screen-out, and a new device or browser changes nothing, because the check recognizes the face. <i>(Real product.)</i></p>
   </div>
 </div>
 
-A blocked respondent is routed back where they came from, your panel's screen-out if you set one. They never get a password, so Alchemer's gate never opens. And because the check recognizes the **face**, not the device, a new browser or a second phone changes nothing.
+<Frame caption="After a pass: your Alchemer login page, password already in the box. Illustration; the real page inherits your survey theme.">
+  <img className="vy-phone" src="/images/screen-gate.png" alt="Alchemer login page pre-filled" style={{ maxWidth: '300px' }} />
+</Frame>
+
 
 ## When they come back
 
