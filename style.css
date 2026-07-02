@@ -491,3 +491,21 @@
   .vy-strip-steps { grid-template-columns: 1fr; gap: 1.1rem; }
   .vy-op-foot { flex-direction: column; align-items: flex-start; }
 }
+
+/* One-pager glass sheet: the whole brief on one liquid-glass surface */
+.vy-op-wrap { position: relative; margin-top: 1.8rem; }
+.vy-op-wrap .vy-car-glow { inset: 8% 10%; }
+.vy-op-sheet {
+  position: relative; z-index: 1; border-radius: 28px; padding: 1.7rem 1.7rem 1.6rem;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.34));
+  backdrop-filter: blur(18px) saturate(1.4); -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65), 0 22px 48px rgba(0, 0, 0, 0.12);
+}
+.dark .vy-op-sheet {
+  border-color: rgba(255, 255, 255, 0.16);
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.03));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16), 0 22px 48px rgba(0, 0, 0, 0.45);
+}
+.vy-op-sheet .vy-op-flow { margin-top: 0; }
+.vy-op-sheet .vy-op-foot { margin-top: 1.5rem; }
