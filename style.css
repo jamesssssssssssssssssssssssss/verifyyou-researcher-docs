@@ -219,16 +219,8 @@
 
 /* Liquid-glass circular carousel (home hero): front card center, others recede behind to the right */
 .vy-hero-grid { display: grid; grid-template-columns: 1.8fr 1fr; gap: 3rem; align-items: center; }
-.vy-side-card {
-  position: relative; display: grid; grid-template-columns: 1fr auto; align-items: center;
-  gap: 0.75rem 1rem; align-content: center; padding: 1.7rem 1.8rem; border-radius: 16px;
-  min-height: 190px; text-decoration: none;
-  transition: border-color 0.15s ease, transform 0.15s ease;
-}
-.vy-side-card:hover { border-color: rgba(22, 163, 74, 0.45); transform: translateY(-1px); }
-.vy-side-mark { display: inline-flex; }
-.vy-side-title { grid-column: 1; font: 600 1.08rem/1.45 Inter, sans-serif; }
-.vy-side-arrow { grid-column: 2; grid-row: 1 / span 2; color: #16A34A; display: inline-flex; }
+.vy-side-card { min-height: 200px; }
+.vy-side-arrow { display: inline-flex; margin-left: 0.65rem; margin-right: 0.25rem; vertical-align: -3px; color: inherit; }
 @media (max-width: 860px) { .vy-hero-grid { grid-template-columns: 1fr; gap: 1.5rem; } .vy-side-card { min-height: 140px; } }
 .vy-car-wrap { max-width: 62rem; margin-left: auto; margin-right: auto; }
 .vy-st-row { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-bottom: 0.9rem; justify-content: center; }
