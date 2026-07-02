@@ -1,7 +1,7 @@
 {
     "$schema": "https://mintlify.com/docs.json",
     "theme": "mint",
-    "name": "VerifyYou on Alchemer",
+    "name": "VerifyYou for research",
     "colors": {
         "primary": "#16A34A",
         "light": "#FFFFFF",
@@ -33,7 +33,7 @@
                 ]
             },
             {
-                "tab": "Researcher setup",
+                "tab": "Alchemer setup",
                 "pages": [
                     "setup"
                 ]
