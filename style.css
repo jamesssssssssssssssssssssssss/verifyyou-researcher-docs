@@ -187,3 +187,6 @@
 
 /* Larger journey rows for the home walkthrough */
 .vy-jbox-lg { font-size: 1.02rem; padding: 0.95rem 1.1rem; font-weight: 600; }
+
+/* Number chip inside walkthrough card titles */
+.vy-card-title .vy-num { margin-right: 0.55rem; vertical-align: 2px; background: rgba(22, 163, 74, 0.08); border-color: rgba(22, 163, 74, 0.4); }
