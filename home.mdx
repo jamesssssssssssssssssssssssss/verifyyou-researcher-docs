@@ -26,10 +26,9 @@ mode: "custom"
 
   <div className="vy-car-wrap mt-6">
     <div className="vy-st-row">
-      <button id="st1" className="vy-st vy-on" onClick={() => { for (const el of document.querySelectorAll('.vy-car-slide')) el.setAttribute('data-pos', String((parseInt(el.id.slice(2), 10) - 1 + 4) % 4)); for (const el of document.querySelectorAll('.vy-st')) el.classList.remove('vy-on'); document.getElementById('st1').classList.add('vy-on'); }}><span className="vy-num">1</span><span className="vy-st-label">A passcode per human</span></button>
-      <button id="st2" className="vy-st" onClick={() => { for (const el of document.querySelectorAll('.vy-car-slide')) el.setAttribute('data-pos', String((parseInt(el.id.slice(2), 10) - 2 + 4) % 4)); for (const el of document.querySelectorAll('.vy-st')) el.classList.remove('vy-on'); document.getElementById('st2').classList.add('vy-on'); }}><span className="vy-num">2</span><span className="vy-st-label">Fakes locked out</span></button>
-      <button id="st3" className="vy-st" onClick={() => { for (const el of document.querySelectorAll('.vy-car-slide')) el.setAttribute('data-pos', String((parseInt(el.id.slice(2), 10) - 3 + 4) % 4)); for (const el of document.querySelectorAll('.vy-st')) el.classList.remove('vy-on'); document.getElementById('st3').classList.add('vy-on'); }}><span className="vy-num">3</span><span className="vy-st-label">Pay only for real</span></button>
-      <button id="st4" className="vy-st" onClick={() => { for (const el of document.querySelectorAll('.vy-car-slide')) el.setAttribute('data-pos', String((parseInt(el.id.slice(2), 10) - 4 + 4) % 4)); for (const el of document.querySelectorAll('.vy-st')) el.classList.remove('vy-on'); document.getElementById('st4').classList.add('vy-on'); }}><span className="vy-num">4</span><span className="vy-st-label">Cleaner data</span></button>
+      <button id="st1" className="vy-st vy-on" onClick={() => { for (const el of document.querySelectorAll('.vy-car-slide')) el.setAttribute('data-pos', String((parseInt(el.id.slice(2), 10) - 1 + 3) % 3)); for (const el of document.querySelectorAll('.vy-st')) el.classList.remove('vy-on'); document.getElementById('st1').classList.add('vy-on'); }}><span className="vy-num">1</span><span className="vy-st-label">A passcode per human</span></button>
+      <button id="st2" className="vy-st" onClick={() => { for (const el of document.querySelectorAll('.vy-car-slide')) el.setAttribute('data-pos', String((parseInt(el.id.slice(2), 10) - 2 + 3) % 3)); for (const el of document.querySelectorAll('.vy-st')) el.classList.remove('vy-on'); document.getElementById('st2').classList.add('vy-on'); }}><span className="vy-num">2</span><span className="vy-st-label">Fakes locked out</span></button>
+      <button id="st3" className="vy-st" onClick={() => { for (const el of document.querySelectorAll('.vy-car-slide')) el.setAttribute('data-pos', String((parseInt(el.id.slice(2), 10) - 3 + 3) % 3)); for (const el of document.querySelectorAll('.vy-st')) el.classList.remove('vy-on'); document.getElementById('st3').classList.add('vy-on'); }}><span className="vy-num">3</span><span className="vy-st-label">Pay only for real</span></button>
     </div>
     <div className="vy-car">
       <div className="vy-car-glow"></div>
@@ -45,18 +44,13 @@ mode: "custom"
       </div>
       <div id="sl3" className="vy-car-slide" data-pos="2">
         <span className="vy-num vy-car-num">3</span>
-        <p className="vy-sp-text text-gray-900 dark:text-zinc-50">You only pay for real, first-time respondents. Blocked traffic never becomes a complete, never enters your data, and never gets paid.</p>
+        <p className="vy-sp-text text-gray-900 dark:text-zinc-50">You only pay for real, first-time respondents. Blocked traffic never becomes a complete, never enters your data, and never gets paid. Your dataset comes out the other side already clean.</p>
         <img className="vy-sp-img" src="/images/vy-real-activity-log.png" alt="The activity log" />
-      </div>
-      <div id="sl4" className="vy-car-slide" data-pos="3">
-        <span className="vy-num vy-car-num">4</span>
-        <p className="vy-sp-text text-gray-900 dark:text-zinc-50">Less time reconciling data, and no spend on illegitimate responses. Every row in your export carries the check.</p>
-        <img className="vy-sp-img" src="/images/alchemer-urlvar-exports.png" alt="The verified column in your export" />
       </div>
     </div>
     <div className="vy-car-nav">
-      <button className="vy-car-arrow" aria-label="Previous stage" onClick={() => { const s = Array.from(document.querySelectorAll('.vy-car-slide')); for (const el of s) el.setAttribute('data-pos', String((parseInt(el.getAttribute('data-pos'), 10) + 1) % 4)); for (const el of document.querySelectorAll('.vy-st')) el.classList.remove('vy-on'); const f = s.find((el) => el.getAttribute('data-pos') === '0'); document.getElementById('st' + f.id.slice(2)).classList.add('vy-on'); }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="m15 5-7 7 7 7" /></svg></button>
-      <button className="vy-car-arrow" aria-label="Next stage" onClick={() => { const s = Array.from(document.querySelectorAll('.vy-car-slide')); for (const el of s) el.setAttribute('data-pos', String((parseInt(el.getAttribute('data-pos'), 10) + 3) % 4)); for (const el of document.querySelectorAll('.vy-st')) el.classList.remove('vy-on'); const f = s.find((el) => el.getAttribute('data-pos') === '0'); document.getElementById('st' + f.id.slice(2)).classList.add('vy-on'); }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="m9 5 7 7-7 7" /></svg></button>
+      <button className="vy-car-arrow" aria-label="Previous stage" onClick={() => { const s = Array.from(document.querySelectorAll('.vy-car-slide')); for (const el of s) el.setAttribute('data-pos', String((parseInt(el.getAttribute('data-pos'), 10) + 1) % 3)); for (const el of document.querySelectorAll('.vy-st')) el.classList.remove('vy-on'); const f = s.find((el) => el.getAttribute('data-pos') === '0'); document.getElementById('st' + f.id.slice(2)).classList.add('vy-on'); }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="m15 5-7 7 7 7" /></svg></button>
+      <button className="vy-car-arrow" aria-label="Next stage" onClick={() => { const s = Array.from(document.querySelectorAll('.vy-car-slide')); for (const el of s) el.setAttribute('data-pos', String((parseInt(el.getAttribute('data-pos'), 10) + 2) % 3)); for (const el of document.querySelectorAll('.vy-st')) el.classList.remove('vy-on'); const f = s.find((el) => el.getAttribute('data-pos') === '0'); document.getElementById('st' + f.id.slice(2)).classList.add('vy-on'); }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="m9 5 7 7-7 7" /></svg></button>
     </div>
   </div>
 </div>

@@ -265,8 +265,7 @@
 /* Centered deck: front card center, previous peeks left, next peeks right, spare card behind */
 .vy-car-slide[data-pos="0"] { transform: translateX(0) scale(1); opacity: 1; z-index: 40; filter: none; }
 .vy-car-slide[data-pos="1"] { transform: translateX(54px) scale(0.94); opacity: 0.6; z-index: 25; filter: blur(2px) saturate(0.85); pointer-events: none; }
-.vy-car-slide[data-pos="2"] { transform: translateX(0) scale(0.9); opacity: 0.25; z-index: 15; filter: blur(4px) saturate(0.75); pointer-events: none; }
-.vy-car-slide[data-pos="3"] { transform: translateX(-54px) scale(0.94); opacity: 0.6; z-index: 25; filter: blur(2px) saturate(0.85); pointer-events: none; }
+.vy-car-slide[data-pos="2"] { transform: translateX(-54px) scale(0.94); opacity: 0.6; z-index: 25; filter: blur(2px) saturate(0.85); pointer-events: none; }
 .vy-car-nav { display: flex; justify-content: center; gap: 0.9rem; margin-top: 0.7rem; }
 .vy-car-arrow {
   width: 50px; height: 50px; border-radius: 999px; cursor: pointer;
@@ -293,7 +292,7 @@
   .vy-car-slide { inset: 0 34px; grid-template-columns: 1fr; gap: 1.1rem; align-content: center; padding: 2.2rem 1.5rem 1.4rem; }
   .vy-car-slide .vy-sp-img { max-height: 300px; }
   .vy-car-slide[data-pos="1"] { transform: translateX(26px) scale(0.94); }
-  .vy-car-slide[data-pos="3"] { transform: translateX(-26px) scale(0.94); }
+  .vy-car-slide[data-pos="2"] { transform: translateX(-26px) scale(0.94); }
   .vy-car-arrow { width: 44px; height: 44px; }
 }
 @media (prefers-reduced-motion: reduce) {
