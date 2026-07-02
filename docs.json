@@ -1,30 +1,45 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "VerifyYou on Alchemer",
-  "colors": {
-    "primary": "#34A853",
-    "light": "#4ADE80",
-    "dark": "#15803D"
-  },
-  "favicon": "/favicon.svg",
-  "navigation": {
-    "pages": [
-      {
-        "group": "The flow",
-        "pages": [
-          "index"
+    "$schema": "https://mintlify.com/docs.json",
+    "theme": "mint",
+    "name": "VerifyYou on Alchemer",
+    "colors": {
+        "primary": "#16A34A",
+        "light": "#FFFFFF",
+        "dark": "#000000"
+    },
+    "fonts": {
+        "family": "Inter"
+    },
+    "icons": {
+        "library": "fontawesome"
+    },
+    "favicon": "/favicon.svg",
+    "logo": {
+        "light": "/logo/light.svg",
+        "dark": "/logo/dark.svg"
+    },
+    "navigation": {
+        "tabs": [
+            { "tab": "Home", "pages": ["home"] },
+            { "tab": "Set up", "pages": ["setup"] },
+            { "tab": "Respondent flow", "pages": ["respondent-flow"] },
+            { "tab": "Why it works", "pages": ["why-it-works"] }
         ]
-      }
-    ]
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "footer": {
-    "socials": {
-      "linkedin": "https://linkedin.com/company/verifyyou"
+    },
+    "navbar": {
+        "primary": {
+            "type": "button",
+            "label": "Dashboard",
+            "href": "https://platform.verifyyou.com/dashboard"
+        }
+    },
+    "contextual": {
+        "options": ["copy", "view", "claude", "chatgpt"]
+    },
+    "footer": {
+        "socials": {
+            "linkedin": "https://www.linkedin.com/company/verifyyou",
+            "instagram": "https://www.instagram.com/verifyyouapp"
+        }
     }
-  }
 }
