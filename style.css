@@ -190,3 +190,15 @@
 
 /* Number chip inside walkthrough card titles */
 .vy-card-title .vy-num { margin-right: 0.55rem; vertical-align: 2px; background: rgba(22, 163, 74, 0.08); border-color: rgba(22, 163, 74, 0.4); }
+
+/* Hero 1-2-3-4 list */
+.vy-hero-list { display: flex; flex-direction: column; gap: 0.7rem; max-width: 34rem; }
+.vy-hl-row { display: flex; align-items: center; gap: 0.7rem; font-size: 1rem; font-weight: 500; }
+.vy-hl-row .vy-num { background: rgba(22, 163, 74, 0.08); border-color: rgba(22, 163, 74, 0.4); flex: none; }
+
+/* Top-of-page next chip */
+.vy-next { display: inline-flex; align-items: center; gap: 0.6rem; margin: 0.2rem 0 0.4rem; padding: 0.45rem 0.85rem; border: 1px solid rgba(127, 127, 127, 0.25); border-radius: 999px; text-decoration: none; font-size: 0.85rem; transition: border-color 0.15s ease; }
+.vy-next:hover { border-color: rgba(22, 163, 74, 0.5); }
+.vy-next-step { color: #8a8f98; font-weight: 600; text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.06em; }
+.vy-next-label { font-weight: 600; }
+.vy-next-arrow { display: inline-flex; color: #16A34A; }

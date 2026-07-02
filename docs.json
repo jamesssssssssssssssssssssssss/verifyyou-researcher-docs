@@ -27,6 +27,12 @@
                 ]
             },
             {
+                "tab": "How it works",
+                "pages": [
+                    "how-it-works"
+                ]
+            },
+            {
                 "tab": "Researcher setup",
                 "pages": [
                     "setup"
@@ -36,12 +42,6 @@
                 "tab": "Respondent experience",
                 "pages": [
                     "respondent-flow"
-                ]
-            },
-            {
-                "tab": "Why it works",
-                "pages": [
-                    "why-it-works"
                 ]
             },
             {
