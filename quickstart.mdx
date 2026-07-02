@@ -1,0 +1,117 @@
+---
+title: "Quickstart: your first gated study"
+description: "Three steps to put a HumanCheck in front of your survey so only real, unique humans reach your paid questions."
+---
+
+Three steps. A gated link, a check, a validated token. Real, unique humans on the other side.
+
+The HumanCheck is a quick liveness and uniqueness check, a face scan that takes a few seconds, that sits in front of your survey like a screener criterion. Your respondent completes it, earns a token, and your survey confirms that token before counting the response. No valid token, no complete.
+
+<Note>
+How tightly you can enforce that token depends on which survey tool you use. Some platforms let you block entry before a single question loads. Others catch it at submission. See [Platform tiers](/platform-tiers) and [Survey tool overview](/survey/overview) before you pick your flow.
+</Note>
+
+<Steps>
+  <Step title="Create a verification and get the gated link">
+    Log into the VerifyYou dashboard, create a new Verification, give it a name, and paste your survey URL as the destination. The dashboard generates a gated link:
+
+    ```
+    app.verifyyou.com/verification/ID
+    ```
+
+    That link is what you share. Your raw survey URL stays private. When a respondent opens it, they complete the liveness and uniqueness check on our hosted page. Pass, and we forward them to your survey with `?vyt=TOKEN&vyc=1` on the URL. The token is a single-use claim ticket minted against one unique face. We only create one per person, and it cannot be guessed.
+
+    You can also configure a Success Redirect URL in the dashboard to control exactly where verified respondents land.
+
+    <Tip>
+      Need to carry a participant identifier — a Prolific ID, a panel RID — through the check and back onto your survey URL? Use `pass_params` when you initialize via the API. The parameter is echoed onto the return URL exactly as you set it. See the POST /v3/initialize reference for the full option set.
+    </Tip>
+  </Step>
+
+  <Step title="Put the gated link where respondents start">
+    Replace your raw survey URL in your recruitment flow with the gated link from step 1. Where it goes depends on your platform:
+
+    | Platform | Where to paste the gated link |
+    |---|---|
+    | Prolific | Study URL field |
+    | MTurk / CloudResearch | External HIT URL |
+    | Cint / Lucid | Entry point URL |
+    | Your own list | The link in your email or SMS invite |
+
+    From the respondent's side: they click, they see a brief selfie check, they land on your survey. From your side: anyone who reaches your survey has already passed our check.
+
+    <Note>
+      A failure redirect — to send rejected respondents back to your panel as a disqualification — does not exist yet. It is on the build list. For now, a respondent who does not pass sees an end-of-session message on our hosted page, and they return to your survey URL with `vyc=0`. Your return page should route that as a screen-out.
+    </Note>
+  </Step>
+
+  <Step title="Add the HumanCheck to your screener">
+    The token lands on your survey URL as `?vyt=TOKEN`. One setup step in your survey tool wires up validation so a bad or missing token is caught before it becomes a counted, paid complete.
+
+    Think of this the way you would think about a trap question — except instead of a fake question you hope catches bad respondents, this is a real check they cannot fake their way past.
+
+    <CardGroup cols={2}>
+      <Card title="True gate" icon="shield-check">
+        Checked before any question loads. No bypass is possible. Works with Qualtrics personal distribution links, Alchemer login credentials, MTurk qualifications, or a researcher-hosted wrapper page. Right choice for any sensitive or high-incentive study.
+      </Card>
+      <Card title="Soft gate + webhook" icon="webhook">
+        Checked the moment a respondent submits. Bad responses are auto-deleted via the platform API before they reach your export. Works with Typeform, Jotform, Tally, SurveyMonkey, and Google Forms.
+      </Card>
+    </CardGroup>
+
+    For either path, validation is a single HTTP request using a per-Flow publishable validation key (`pk_val_...`). This key is validate-only — no PII crosses it, and it is safe on the server side of your survey tool. Skipping the key entirely is not safe; it opens the endpoint to token-burn attacks.
+
+    Peek the token (idempotent, does not burn it):
+
+    ```http
+    GET /v3/survey/peek?vyt=TOKEN
+    Authorization: Bearer pk_val_FLOW_RAND
+    ```
+
+    Returns `{ verified, reason }`. Check this at the gate. Check it again from a webhook. No conflict.
+
+    When you are ready to accept a completion as final, burn the token:
+
+    ```http
+    POST /v3/survey/consume?vyt=TOKEN
+    Authorization: Bearer pk_val_FLOW_RAND
+    ```
+
+    One token, one complete. It cannot be replayed.
+
+    <Warning>
+      Always use a `pk_val_` validation key for survey-side calls. Never expose your `sk_` secret key in a survey tool credential store.
+    </Warning>
+
+    Step-by-step setup for each platform is in [Survey tool overview](/survey/overview).
+  </Step>
+</Steps>
+
+## What each side ends up with
+
+Once all three steps are in place:
+
+1. A respondent clicks your recruitment link and lands on the VerifyYou check.
+2. They complete a quick liveness selfie. We check liveness — a live person, present now, not a photo or replay — and then uniqueness: have we seen this face before?
+3. If they pass, they land on your survey with `?vyt=TOKEN&vyc=1`. Treat `vyc` as a UI hint only; always confirm the token server-side. Your systems receive a verdict — never a face, name, or image.
+4. Your survey validates the token. A bad or missing token is caught before any question is answered (true gate) or before the response saves (soft gate + webhook).
+5. Only real, unique humans become completes.
+
+The uniqueness check is what closes the loop on repeat takers. The same person cannot earn a second token. Share the link, try again, use a different browser — it does not matter. One face, one ticket, one complete.
+
+## Where to go next
+
+<CardGroup cols={2}>
+  <Card title="Platform tiers" icon="layer-group" href="/platform-tiers">
+    Which survey tools support true gates versus soft gates, and how to pick the right tier for your study.
+  </Card>
+  <Card title="Survey tool setup guides" icon="book-open" href="/survey/overview">
+    Step-by-step instructions for Qualtrics, Alchemer, Typeform, Jotform, Tally, SurveyMonkey, Google Forms, and Formspark.
+  </Card>
+  <Card title="Recruitment platform guides" icon="users" href="/recruitment/prolific">
+    How to wire the gated link on Prolific, MTurk, CloudResearch, and Cint.
+  </Card>
+  <Card title="The token, explained" icon="ticket" href="/the-token">
+    What the token is, how long it lives, and why it cannot be earned twice.
+  </Card>
+</CardGroup>
