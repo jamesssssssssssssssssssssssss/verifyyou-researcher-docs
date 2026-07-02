@@ -220,7 +220,7 @@
 /* Liquid-glass circular carousel (home hero): front card center, others recede behind to the right */
 .vy-hero-grid { display: grid; grid-template-columns: 1.8fr 1fr; gap: 3rem; align-items: center; }
 .vy-side-card { min-height: 200px; }
-.vy-side-arrow { display: inline-flex; margin-left: 0.65rem; margin-right: 0.25rem; vertical-align: -3px; color: inherit; }
+.vy-side-arrow { display: inline-flex; margin-bottom: 0.6rem; color: inherit; }
 @media (max-width: 860px) { .vy-hero-grid { grid-template-columns: 1fr; gap: 1.5rem; } .vy-side-card { min-height: 140px; } }
 .vy-car-wrap { max-width: 62rem; margin-left: auto; margin-right: auto; }
 .vy-st-row { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-bottom: 0.9rem; justify-content: center; }
