@@ -4,116 +4,6 @@ description: "Verify that each response comes from a real, unique human, automat
 mode: "custom"
 ---
 
-{/* ============ ONE-PAGER SECTION (drafted 2026-07-02) ============
-   Sits above the original hero. All styles scoped under .vy-onepager.
-   CTA notes: "Try the check yourself" points at the showcase demo; swap for a
-   minted no-code verification link (app.verifyyou.com/verification/<id>) when ready.
-   "Field a pilot with us" mails James; swap to David if preferred.
-   CONSOLIDATION PROPOSAL: this section overlaps the deck below (capabilities) and
-   the One-pager tab (flow + pillars). If this section stays, consider trimming the
-   deck to 2 cards and making the One-pager tab download-only. */}
-
-<div className="vy-onepager max-w-5xl mx-auto px-6">
-
-  <div className="vy-o-head">
-    <p className="vy-kicker">For researchers</p>
-    <h1 className="vy-o-h1 text-gray-900 dark:text-zinc-50">Add one screener question: is this a real, unique human?</h1>
-    <p className="vy-o-sub text-gray-500 dark:text-zinc-400">Works inside any survey platform: Alchemer, Qualtrics, Prolific, MTurk, or your own tool. No integration, no platform permission. You control it.</p>
-    <p className="vy-o-problem text-gray-500 dark:text-zinc-400">Bots, AI agents, and professional repeat takers contaminate online panels, and cleaning after the fact cannot prove who was behind a response. Verification has to happen upstream, at the moment of participation.</p>
-  </div>
-
-  <div className="vy-o-flow bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800">
-    <div className="vy-o-steps">
-      <div className="vy-o-step">
-        <span className="vy-o-actor vy-o-actor-you">You</span>
-        <span className="vy-num">1</span>
-        <p className="vy-o-step-t text-gray-900 dark:text-zinc-50">Drop the HumanCheck link into your survey</p>
-        <p className="vy-o-step-d text-gray-500 dark:text-zinc-400">As a screener question. Any platform, any question position.</p>
-      </div>
-      <div className="vy-o-step">
-        <span className="vy-o-actor">Respondent</span>
-        <span className="vy-num">2</span>
-        <p className="vy-o-step-t text-gray-900 dark:text-zinc-50">Five seconds in the camera</p>
-        <p className="vy-o-step-d text-gray-500 dark:text-zinc-400">On their own phone or laptop, with live prompts.</p>
-      </div>
-      <div className="vy-o-step">
-        <span className="vy-o-actor">Respondent</span>
-        <span className="vy-num">3</span>
-        <p className="vy-o-step-t text-gray-900 dark:text-zinc-50">They paste their one-time code</p>
-        <p className="vy-o-step-d text-gray-500 dark:text-zinc-400">One verified human, one valid code per study.</p>
-      </div>
-      <div className="vy-o-step">
-        <span className="vy-o-actor vy-o-actor-you">You</span>
-        <span className="vy-num">4</span>
-        <p className="vy-o-step-t text-gray-900 dark:text-zinc-50">Reconcile the verification report</p>
-        <p className="vy-o-step-d text-gray-500 dark:text-zinc-400">Match codes against your platform export. Keep only verified completes.</p>
-      </div>
-    </div>
-    <p className="vy-o-bridge text-gray-500 dark:text-zinc-400">On Alchemer, the code can even fill itself in at the platform's own login gate. <a href="/setup">See Alchemer setup</a>.</p>
-  </div>
-
-  <div className="vy-o-report bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800">
-    <table className="vy-o-table">
-      <thead><tr><th>Session ID</th><th>Code</th><th>Verified</th></tr></thead>
-      <tbody>
-        <tr><td>R_2mQ84KcTeF</td><td>vyc_8kq2</td><td><span className="vy-o-ok">✓ Verified</span></td></tr>
-        <tr><td>R_9dLn31XwpA</td><td>vyc_x41m</td><td><span className="vy-o-ok">✓ Verified</span></td></tr>
-        <tr><td>R_5tKr77JzqB</td><td>vyc_8kq2</td><td><span className="vy-o-no">✗ Not verified</span></td></tr>
-        <tr><td>R_7hFm20YvcD</td><td>vyc_p9r7</td><td><span className="vy-o-ok">✓ Verified</span></td></tr>
-      </tbody>
-    </table>
-    <p className="vy-o-cap text-gray-500 dark:text-zinc-400">Illustrative sample. Pay for verified completes, discard the rest.</p>
-  </div>
-
-  <div className="vy-o-grid">
-    <div className="vy-o-card bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800">
-      <p className="vy-o-card-k">Live</p>
-      <p className="vy-o-card-t text-gray-900 dark:text-zinc-50">A real person is present</p>
-      <p className="vy-o-card-d text-gray-500 dark:text-zinc-400">A five-second camera check with live prompts confirms a live human, not a bot, a script, or a replay.</p>
-    </div>
-    <div className="vy-o-card bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800">
-      <p className="vy-o-card-k">Unique</p>
-      <p className="vy-o-card-t text-gray-900 dark:text-zinc-50">One person, one code</p>
-      <p className="vy-o-card-d text-gray-500 dark:text-zinc-400">Each verified human earns exactly one valid code per study. A duplicate face never earns a second one.</p>
-    </div>
-    <div className="vy-o-card bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800">
-      <p className="vy-o-card-k">Consistent</p>
-      <p className="vy-o-card-t text-gray-900 dark:text-zinc-50">The same person returns</p>
-      <p className="vy-o-card-d text-gray-500 dark:text-zinc-400">Across waves, a returning respondent is recognized, with less friction, so the same human is not counted twice.</p>
-    </div>
-    <div className="vy-o-card bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800">
-      <p className="vy-o-card-k">Private</p>
-      <p className="vy-o-card-t text-gray-900 dark:text-zinc-50">No identity, ever</p>
-      <p className="vy-o-card-d text-gray-500 dark:text-zinc-400">No ID documents, no PII, no stored images: a non-reversible code, and you receive only verified or not verified.</p>
-    </div>
-  </div>
-
-  <div className="vy-o-privacy bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800">
-    <p className="vy-o-privacy-t text-gray-900 dark:text-zinc-50">What happens to the respondent's data</p>
-    <ol className="vy-o-lifecycle">
-      <li><span className="vy-num">1</span><span className="text-gray-500 dark:text-zinc-400">The camera runs on the respondent's own device.</span></li>
-      <li><span className="vy-num">2</span><span className="text-gray-500 dark:text-zinc-400">The check confirms a live, unique human and converts the face to a non-reversible code.</span></li>
-      <li><span className="vy-num">3</span><span className="text-gray-500 dark:text-zinc-400">The image is never stored, and the code cannot be turned back into a face.</span></li>
-      <li><span className="vy-num">4</span><span className="text-gray-500 dark:text-zinc-400">The code is compared within your study to block duplicates.</span></li>
-      <li><span className="vy-num">5</span><span className="text-gray-500 dark:text-zinc-400">You receive a yes or no. Never a face, a name, or contact details.</span></li>
-    </ol>
-    <div className="vy-o-irb">
-      <span className="vy-o-irb-i">No PII collected</span>
-      <span className="vy-o-irb-i">No images stored</span>
-      <span className="vy-o-irb-i">Binary signal only</span>
-      <span className="vy-o-irb-i">Less friction than ID checks</span>
-    </div>
-  </div>
-
-  <div className="vy-o-cta">
-    <a className="vy-btn vy-btn-primary" href="https://verifyyou-demo.vercel.app">Try the check yourself</a>
-    <a className="vy-btn vy-btn-secondary text-gray-900 dark:text-zinc-50" href="mailto:james@verifyyou.io?subject=HumanCheck%20pilot">Field a pilot with us</a>
-  </div>
-
-</div>
-
-{/* ============ END ONE-PAGER SECTION ============ */}
-
 <div className="vy-hero max-w-7xl mx-auto px-6">
   <div className="vy-hero-grid">
 
@@ -121,7 +11,7 @@ mode: "custom"
 
       <p className="vy-kicker">HumanCheck</p>
 
-      <h1 className="mt-3 text-gray-900 dark:text-zinc-50">Every response from a real, unique human</h1>
+      <h1 className="mt-3 text-gray-900 dark:text-zinc-50">Verify every response is from a unique human</h1>
 
       <p className="mt-4 text-lg text-gray-500 dark:text-zinc-400">HumanCheck locks bots and repeat humans out before they ever reach your study.</p>
 
@@ -133,6 +23,55 @@ mode: "custom"
       <span className="vy-card-title">See how HumanCheck protects studies</span>
     </a>
 
+  </div>
+
+
+  {/* One-pager core: the actual flow on glass. Deck + sections below unchanged;
+     if this stays, consider slimming the deck (overlap). CTA swap notes:
+     Try -> mint a no-code verification link when ready; pilot mailto -> David if preferred. */}
+  <div className="vy-onepager">
+    <div className="vy-op-wrap">
+      <div className="vy-car-glow"></div>
+      <div className="vy-op-sheet">
+        <div className="vy-op-lanes vy-o-lanes">
+          <span className="vy-fork-pill vy-op-node"><span className="vy-op-nico"><Icon icon="link" iconType="light" size={14} /></span>They click your study link</span>
+          <svg className="vy-op-arrow" viewBox="0 0 60 14" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 7 h50" stroke="currentColor" strokeWidth="1.5" /><path d="M46 2 L54 7 L46 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+          <span className="vy-o-mid">
+            <img className="vy-phone vy-o-phone" src="/images/screen-scan2.png" alt="The live face check, real product" />
+            <span className="vy-o-mid-label text-gray-900 dark:text-zinc-50">Five-second face check</span>
+          </span>
+          <svg className="vy-op-arrow" viewBox="0 0 60 14" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 7 h50" stroke="currentColor" strokeWidth="1.5" /><path d="M46 2 L54 7 L46 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+          <span className="vy-op-split">
+            <span className="vy-fork-pill vy-fork-pass"><span className="vy-fork-ic"><Icon icon="circle-check" iconType="light" size={15} /></span>Pass: into your study</span>
+            <span className="vy-fork-pill vy-fork-fail"><span className="vy-fork-ic"><Icon icon="circle-xmark" iconType="light" size={15} /></span>Fail: nothing to pay</span>
+          </span>
+        </div>
+        <div className="vy-o-bottom">
+          <div>
+            <p className="vy-o-privacy-t text-gray-900 dark:text-zinc-50">What happens to their data</p>
+            <ol className="vy-o-lifecycle">
+              <li><span className="vy-num">1</span><span className="text-gray-500 dark:text-zinc-400">The camera runs on the respondent's own device.</span></li>
+              <li><span className="vy-num">2</span><span className="text-gray-500 dark:text-zinc-400">The check confirms a live, unique human and converts the face to a non-reversible code.</span></li>
+              <li><span className="vy-num">3</span><span className="text-gray-500 dark:text-zinc-400">The image is never stored, and the code cannot be turned back into a face.</span></li>
+              <li><span className="vy-num">4</span><span className="text-gray-500 dark:text-zinc-400">You receive a yes or no. Never a face, a name, or contact details.</span></li>
+            </ol>
+          </div>
+          <div className="vy-o-side">
+            <div className="vy-o-irb">
+              <span className="vy-o-irb-i">No PII collected</span>
+              <span className="vy-o-irb-i">No images stored</span>
+              <span className="vy-o-irb-i">Binary signal only</span>
+              <span className="vy-o-irb-i">Less friction than ID checks</span>
+            </div>
+            <div className="vy-o-cta">
+              <a className="vy-btn vy-btn-primary" href="https://verifyyou-demo.vercel.app">Try the check yourself</a>
+              <a className="vy-btn vy-btn-secondary text-gray-900 dark:text-zinc-50" href="/images/humancheck-one-pager-v2.png" download="humancheck-one-pager-v2.png"><Icon icon="arrow-down-to-line" iconType="light" size={14} />Download the one-pager</a>
+              <a className="vy-o-pilot" href="mailto:james@verifyyou.io?subject=HumanCheck%20pilot">Field a pilot with us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div className="vy-car-wrap mt-8">
