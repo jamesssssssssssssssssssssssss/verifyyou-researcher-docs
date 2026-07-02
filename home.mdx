@@ -5,8 +5,7 @@ mode: "custom"
 ---
 
 <div className="vy-hero max-w-7xl mx-auto px-6">
-  <div className="grid lg:grid-cols-2 gap-10 items-start">
-    <div>
+  <div className="max-w-3xl">
 
       <p className="vy-kicker">VerifyYou on Alchemer</p>
 
@@ -14,25 +13,6 @@ mode: "custom"
 
       <p className="mt-4 text-lg text-gray-500 dark:text-zinc-400">Automatically. A quick face check sits in front of your Alchemer survey, so bots and repeat takers never reach your questions, and every complete you pay for is a real person who took it once. About two cents a verification, no code.</p>
 
-      <div className="mt-6 vy-ask" onClick={() => document.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', metaKey: true, ctrlKey: true, bubbles: true }))}>
-        <span className="vy-ask-icon"><Icon icon="magnifying-glass" iconType="light" size={17} /></span>
-        <span className="vy-ask-text">Ask anything about the setup</span>
-        <span className="vy-ask-kbd">⌘K</span>
-      </div>
-
-      <div className="mt-4 flex flex-wrap gap-3">
-        <a href="/setup" className="vy-btn vy-btn-primary"><Icon icon="sliders" iconType="light" size={15} />Set it up</a>
-        <a href="/respondent-flow" className="vy-btn vy-btn-secondary"><Icon icon="mobile-screen" iconType="light" size={15} />The respondent experience</a>
-      </div>
-
-    </div>
-    <div className="relative">
-
-<svg className="vy-hero-mark" viewBox="13.5 9 22 31.5" fill="none" xmlns="http://www.w3.org/2000/svg"><path className="vy-mark-body" fillRule="evenodd" clipRule="evenodd" d="M17.5951 39.4589C15.3571 39.4589 14.1941 38.2659 14.1941 35.8529V25.4269C14.1941 23.2919 15.1211 22.1149 16.8881 21.8789H32.1131C33.8791 22.1149 34.7921 23.2919 34.7921 25.4269V35.8509C34.7921 38.2659 33.6291 39.4589 31.3901 39.4589H17.5951ZM18.0211 36.8239H30.9781C31.5971 36.8239 31.9361 36.4559 31.9361 35.7479V25.5299C31.9361 24.8239 31.5971 24.4709 30.9781 24.4709H18.0221C17.4191 24.4709 17.0501 24.8229 17.0501 25.5299V35.7479C17.0501 36.4559 17.4181 36.8239 18.0221 36.8239H18.0211Z" fill="currentColor"/><path className="vy-mark-person" d="M24.5001 30.7099C23.5631 30.7099 22.7691 29.8739 22.7691 28.8079C22.7691 27.7599 23.5671 26.9399 24.5001 26.9399C25.4321 26.9399 26.2301 27.7439 26.2301 28.7989C26.2301 29.8739 25.4411 30.7099 24.5001 30.7099ZM21.6401 34.7009C21.1591 34.7009 20.8711 34.4729 20.8711 34.0949C20.8711 32.9909 22.2711 31.4709 24.5001 31.4709C26.7231 31.4709 28.1281 32.9909 28.1281 34.0949C28.1281 34.4719 27.8371 34.7009 27.3551 34.7009H21.6401Z" fill="currentColor"/><path className="vy-shackle" d="M16.8881 21.8789V18.3749C16.8881 12.9419 20.4811 10.1289 24.5001 10.1289C28.5211 10.1289 32.1131 12.9419 32.1131 18.3749V21.8799H29.3591V18.1099C29.3591 14.6649 27.1211 12.7799 24.5001 12.7799C21.8641 12.7799 19.6421 14.6649 19.6421 18.1099V21.8349H16.8881Z" fill="currentColor"/></svg>
-
-<img src="/images/screen-scan2.png" alt="The HumanCheck face scan" className="vy-hero-phone" />
-
-    </div>
   </div>
 </div>
 
@@ -40,38 +20,40 @@ mode: "custom"
 
   <p className="vy-kicker">Start here</p>
 
-  <h2 className="mt-2 text-2xl font-semibold text-gray-900 dark:text-zinc-50">Four things to know</h2>
+  <h2 className="mt-2 text-2xl font-semibold text-gray-900 dark:text-zinc-50">Walk through it in order</h2>
 
-  <div className="grid md:grid-cols-2 gap-5 mt-6">
+  <div className="mt-6 max-w-2xl">
+    <div className="vy-journey">
 
-    <a href="/setup" className="vy-card bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 text-gray-900 dark:text-zinc-50">
-      <span className="vy-card-wm"><Icon icon="sliders" iconType="light" size={250} /></span>
-      <span className="vy-card-icon"><Icon icon="sliders" iconType="light" size={22} /></span>
-      <span className="vy-card-title">The surveyor setup</span>
-      <span className="vy-card-sub text-gray-500 dark:text-zinc-400">Four steps, two tools, about fifteen minutes. Once per study, no code.</span>
-    </a>
+      <div className="vy-jstage">
+        <div className="vy-jnum bg-white dark:bg-black">1</div>
+        <div className="vy-jbody">
+          <a className="vy-jbox vy-jbox-lg text-gray-900 dark:text-zinc-50" href="/setup"><span className="vy-jbox-ico"><Icon icon="sliders" iconType="light" size={17} /></span>Researcher setup</a>
+        </div>
+      </div>
 
-    <a href="/respondent-flow" className="vy-card bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 text-gray-900 dark:text-zinc-50">
-      <span className="vy-card-wm"><Icon icon="mobile-screen" iconType="light" size={250} /></span>
-      <span className="vy-card-icon"><Icon icon="mobile-screen" iconType="light" size={22} /></span>
-      <span className="vy-card-title">The respondent experience</span>
-      <span className="vy-card-sub text-gray-500 dark:text-zinc-400">Screen by screen: the click, the scan, the pass, and what blocked looks like.</span>
-    </a>
+      <div className="vy-jstage">
+        <div className="vy-jnum bg-white dark:bg-black">2</div>
+        <div className="vy-jbody">
+          <a className="vy-jbox vy-jbox-lg text-gray-900 dark:text-zinc-50" href="/respondent-flow"><span className="vy-jbox-ico"><Icon icon="mobile-screen" iconType="light" size={17} /></span>The respondent experience</a>
+        </div>
+      </div>
 
-    <a href="/why-it-works" className="vy-card bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 text-gray-900 dark:text-zinc-50">
-      <svg className="vy-mark-wm" viewBox="13.5 9 22 31.5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.5951 39.4589C15.3571 39.4589 14.1941 38.2659 14.1941 35.8529V25.4269C14.1941 23.2919 15.1211 22.1149 16.8881 21.8789V18.3749C16.8881 12.9419 20.4811 10.1289 24.5001 10.1289C28.5211 10.1289 32.1131 12.9419 32.1131 18.3749V21.8799C33.8791 22.1149 34.7921 23.2919 34.7921 25.4269V35.8509C34.7921 38.2659 33.6291 39.4589 31.3901 39.4589H17.5951ZM19.6421 18.1099V21.8349H29.3591V18.1099C29.3591 14.6649 27.1211 12.7799 24.5001 12.7799C21.8641 12.7799 19.6421 14.6649 19.6421 18.1099ZM18.0211 36.8239H30.9781C31.5971 36.8239 31.9361 36.4559 31.9361 35.7479V25.5299C31.9361 24.8239 31.5971 24.4709 30.9781 24.4709H18.0221C17.4191 24.4709 17.0501 24.8229 17.0501 25.5299V35.7479C17.0501 36.4559 17.4181 36.8239 18.0221 36.8239H18.0211Z" fill="currentColor"/><path d="M24.5001 30.7099C23.5631 30.7099 22.7691 29.8739 22.7691 28.8079C22.7691 27.7599 23.5671 26.9399 24.5001 26.9399C25.4321 26.9399 26.2301 27.7439 26.2301 28.7989C26.2301 29.8739 25.4411 30.7099 24.5001 30.7099ZM21.6401 34.7009C21.1591 34.7009 20.8711 34.4729 20.8711 34.0949C20.8711 32.9909 22.2711 31.4709 24.5001 31.4709C26.7231 31.4709 28.1281 32.9909 28.1281 34.0949C28.1281 34.4719 27.8371 34.7009 27.3551 34.7009H21.6401Z" fill="currentColor"/></svg>
-      <svg className="vy-mark-icon" viewBox="13.5 9 22 31.5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.5951 39.4589C15.3571 39.4589 14.1941 38.2659 14.1941 35.8529V25.4269C14.1941 23.2919 15.1211 22.1149 16.8881 21.8789V18.3749C16.8881 12.9419 20.4811 10.1289 24.5001 10.1289C28.5211 10.1289 32.1131 12.9419 32.1131 18.3749V21.8799C33.8791 22.1149 34.7921 23.2919 34.7921 25.4269V35.8509C34.7921 38.2659 33.6291 39.4589 31.3901 39.4589H17.5951ZM19.6421 18.1099V21.8349H29.3591V18.1099C29.3591 14.6649 27.1211 12.7799 24.5001 12.7799C21.8641 12.7799 19.6421 14.6649 19.6421 18.1099ZM18.0211 36.8239H30.9781C31.5971 36.8239 31.9361 36.4559 31.9361 35.7479V25.5299C31.9361 24.8239 31.5971 24.4709 30.9781 24.4709H18.0221C17.4191 24.4709 17.0501 24.8229 17.0501 25.5299V35.7479C17.0501 36.4559 17.4181 36.8239 18.0221 36.8239H18.0211Z" fill="currentColor"/><path d="M24.5001 30.7099C23.5631 30.7099 22.7691 29.8739 22.7691 28.8079C22.7691 27.7599 23.5671 26.9399 24.5001 26.9399C25.4321 26.9399 26.2301 27.7439 26.2301 28.7989C26.2301 29.8739 25.4411 30.7099 24.5001 30.7099ZM21.6401 34.7009C21.1591 34.7009 20.8711 34.4729 20.8711 34.0949C20.8711 32.9909 22.2711 31.4709 24.5001 31.4709C26.7231 31.4709 28.1281 32.9909 28.1281 34.0949C28.1281 34.4719 27.8371 34.7009 27.3551 34.7009H21.6401Z" fill="currentColor"/></svg>
-      <span className="vy-card-title">Why it works</span>
-      <span className="vy-card-sub text-gray-500 dark:text-zinc-400">One password, one human, one use. Why it can't be shared, guessed, or reused.</span>
-    </a>
+      <div className="vy-jstage">
+        <div className="vy-jnum bg-white dark:bg-black">3</div>
+        <div className="vy-jbody">
+          <a className="vy-jbox vy-jbox-lg text-gray-900 dark:text-zinc-50" href="/why-it-works"><span className="vy-jbox-ico"><Icon icon="lock" iconType="light" size={17} /></span>Why it works</a>
+        </div>
+      </div>
 
-    <a href="/any-platform" className="vy-card bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 text-gray-900 dark:text-zinc-50">
-      <span className="vy-card-wm"><Icon icon="layer-group" iconType="light" size={250} /></span>
-      <span className="vy-card-icon"><Icon icon="layer-group" iconType="light" size={22} /></span>
-      <span className="vy-card-title">The same mechanism, any platform</span>
-      <span className="vy-card-sub text-gray-500 dark:text-zinc-400">Alchemer today. The same check fits Qualtrics, Typeform, and any survey stack.</span>
-    </a>
+      <div className="vy-jstage">
+        <div className="vy-jnum bg-white dark:bg-black">4</div>
+        <div className="vy-jbody">
+          <a className="vy-jbox vy-jbox-lg text-gray-900 dark:text-zinc-50" href="/any-platform"><span className="vy-jbox-ico"><Icon icon="layer-group" iconType="light" size={17} /></span>The same mechanism, any platform</a>
+        </div>
+      </div>
 
+    </div>
   </div>
 
 </div>
@@ -82,7 +64,7 @@ mode: "custom"
 
   <h2 className="mt-2 text-2xl font-semibold text-gray-900 dark:text-zinc-50">One password. One human. One use.</h2>
 
-  <p className="mt-2 text-gray-500 dark:text-zinc-400 max-w-3xl">Every password we mint is tied to one unique face and works exactly once, enforced by Alchemer's own <a href="https://help.alchemer.com/help/login-password-action">Login/Password action</a>. A shared link, a reused password, or a second attempt hits a wall before your first question.</p>
+  <p className="mt-2 text-gray-500 dark:text-zinc-400 max-w-3xl">Every password we mint is tied to one unique face and works exactly once, enforced by Alchemer's own <a href="https://help.alchemer.com/help/login-password-action">Login/Password action</a>. A shared link, a reused password, or a second attempt hits a wall before your first question. This is the shape at a glance, not the manual; the full click-by-click lives in <a href="/setup">Researcher setup</a>.</p>
 
   <div className="mt-6">
 

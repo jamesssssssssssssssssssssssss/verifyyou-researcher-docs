@@ -184,3 +184,6 @@
 /* Phone renders: shadow lives in CSS (adapts to theme), never baked into the PNG */
 .vy-phone, .vy-hero-phone { filter: drop-shadow(0 18px 34px rgba(0, 0, 0, 0.25)); }
 .dark .vy-phone, .dark .vy-hero-phone { filter: drop-shadow(0 22px 44px rgba(0, 0, 0, 0.6)); }
+
+/* Larger journey rows for the home walkthrough */
+.vy-jbox-lg { font-size: 1.02rem; padding: 0.95rem 1.1rem; font-weight: 600; }
