@@ -27,6 +27,12 @@
                 ]
             },
             {
+                "tab": "One-pager",
+                "pages": [
+                    "one-pager"
+                ]
+            },
+            {
                 "tab": "How it works",
                 "pages": [
                     "how-it-works"
