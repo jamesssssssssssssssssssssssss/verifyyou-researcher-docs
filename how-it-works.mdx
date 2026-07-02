@@ -39,12 +39,13 @@ About one to two cents a verification, charged once per human, so returning resp
 
 No photo is shared with you or with Alchemer, only a yes or no. Your study receives a verdict and a password, never a face, a name, or personal information.
 
-## Two things we confirm live
+## What we verified, and the five-minute confirmation
 
-We would rather flag these than have you find them.
+We dug through Alchemer's current docs, the SurveyGizmo-era archives, and community threads so you do not have to.
 
-- **Exactly when Alchemer marks a one-time password as used.** Their docs do not say whether it burns at login or at completion. A five-minute test in the builder settles it, and it is part of any first setup we do together.
-- **Whether the pre-filled login can skip itself entirely.** The pieces are documented; the combination is not. Worst case, your respondent sees a filled box and taps one button.
+- **When a password burns: at login submit, not at completion.** Alchemer's docs show a password cannot resume a response unless a separate resume feature is on, which means plain single-use passwords are spent on first use. So an abandoner has burned their password, and our gate simply re-issues to the same face.
+- **The invisible gate is Alchemer's own recipe.** Their documented [auto-login flow](https://help.alchemer.com/help/include-login-action-credentials-in-an-email-campaign-message) combines a pre-populated password with page 1's Automatically Submit Page toggle, so a verified respondent never sees the login page at all.
+- **The five-minute confirmation** left for any first setup: that the URL merge code triggers auto-login exactly like the email merge codes in Alchemer's walkthrough, and what an invalid password shows when there is no respondent present to retry.
 
 ## Start here
 

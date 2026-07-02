@@ -37,7 +37,9 @@ Five steps, two tools, about fifteen minutes. Once per study, no code anywhere.
   <Step title="Set the password to fill itself in" icon="wand-magic-sparkles">
     In the same action, open the **Display** tab and set **Pre-populate Password** to the merge code `[url("vypw")]`. Click **Save Action**.
 
-    **You now have:** a gate that opens itself for verified respondents. The password each verified person carries on their link lands in the box on its own, they type nothing.
+    Optional, for a fully invisible gate: on page 1's **Logic** tab, turn on **Automatically Submit Page**. This is Alchemer's own documented recipe for [automatically logging a respondent in](https://help.alchemer.com/help/include-login-action-credentials-in-an-email-campaign-message), and with it a verified respondent goes straight from the check to your questions without ever seeing the login page.
+
+    **You now have:** a gate that opens itself for verified respondents. The password lands in the box on its own, and with auto-submit on, they never even see the page.
 
     <Frame caption="Alchemer's own UI. The example shown uses a contact merge code; yours uses the URL one above.">
       <img src="/images/alchemer-prepopulate.png" alt="Alchemer pre-populate password setting" />
@@ -61,7 +63,7 @@ No real study needed. Make up a survey, put the gate in front of it, and try to 
 </Steps>
 
 <Note>
-**Where this stands, honestly.** Two details we confirm live in the builder during a first test: exactly when Alchemer marks a one-time password as used, and whether the pre-filled login page can skip itself entirely. Worst case, the respondent sees a filled box and taps one button.
+**Where this stands, honestly.** Deep research settled most of it: passwords burn when the login page is submitted (so we re-issue to anyone who abandons, since we recognize their face), and the invisible gate is Alchemer's own documented recipe. One five-minute check remains for any first setup: confirming the URL merge code triggers the auto-login the same way Alchemer's email merge codes do. Worst case, the respondent sees a filled box and taps one button.
 </Note>
 
 ## What happens next

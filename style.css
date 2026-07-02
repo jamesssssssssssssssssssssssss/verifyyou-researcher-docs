@@ -222,10 +222,10 @@
 .vy-st-row { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-bottom: 1.25rem; }
 .vy-st { display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.45rem 0.9rem 0.45rem 0.5rem; border: 1px solid rgba(127, 127, 127, 0.22); border-radius: 999px; background: transparent; font: 600 0.88rem/1.2 Inter, sans-serif; color: #8a8f98; cursor: pointer; transition: border-color 0.15s ease, color 0.15s ease; }
 .vy-st:hover { border-color: rgba(22, 163, 74, 0.45); }
-.vy-st.on { color: inherit; border-color: rgba(22, 163, 74, 0.55); }
+.vy-st.vy-on { color: inherit; border-color: rgba(22, 163, 74, 0.55); }
 .vy-sp { display: none; }
-.vy-sp.on { display: grid; grid-template-columns: 1.05fr 1fr; gap: 2rem; align-items: center; }
-@media (max-width: 860px) { .vy-sp.on { grid-template-columns: 1fr; } }
+.vy-sp.vy-on { display: grid; grid-template-columns: 1.05fr 1fr; gap: 2rem; align-items: center; }
+@media (max-width: 860px) { .vy-sp.vy-on { grid-template-columns: 1fr; } }
 .vy-sp-text { font-size: 1.08rem; line-height: 1.6; font-weight: 500; }
 .vy-sp-img { max-height: 330px; width: auto; max-width: 100%; justify-self: center; border-radius: 12px; border: 1px solid rgba(127, 127, 127, 0.18); }
 .vy-sp-phone { border: none; border-radius: 0; filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.35)); }
