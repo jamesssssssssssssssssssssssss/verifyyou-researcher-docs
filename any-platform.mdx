@@ -1,0 +1,52 @@
+---
+title: "The same mechanism, any platform"
+description: "One check, one single-use credential, enforced by whatever gate your platform already has. Alchemer today; the pattern fits anywhere."
+icon: "layer-group"
+---
+
+Nothing about this is Alchemer-specific except the last step. The mechanism is always the same three moves, and only the credential changes shape to fit the platform's own lock.
+
+<Steps>
+  <Step title="The check">A quick face scan proves two things: a live person is present, and this face has not already been here for this study. Same check everywhere.</Step>
+  <Step title="The single-use credential">Each verified human is handed a credential that works exactly once. This is the part that changes shape per platform.</Step>
+  <Step title="The platform's own gate enforces it">We never need the platform's permission or an integration deal, because the enforcement uses a feature the platform already ships.</Step>
+</Steps>
+
+## What the credential looks like per platform
+
+| Platform | The credential | The platform's own lock |
+| --- | --- | --- |
+| **Alchemer** | A one-time password | The Login/Password action, individual one-time passwords that deactivate after use |
+| **Qualtrics** | A single-use personal link | Invitation Only mode: the link is the key, and it dies on first open |
+| **Typeform, Jotform, Tally** | A one-time token on the link | A hosted gate page opens the form only for a valid token, and a webhook removes anything that slips through |
+| **Google Forms** | A one-time token in a field | A small script checks each submission and removes the bad ones |
+| **Your own survey stack** | A one-time token | Your code asks us "is this token real and unused?" before saving |
+
+The strength of the lock varies a little by platform, which is exactly why we start with Alchemer: its password gate is enforced by Alchemer's own server before a single question shows, the strongest no-code gate of any major survey tool.
+
+## Where this matters
+
+The same gate works anywhere paid responses attract fake ones:
+
+- **Academic research.** Grant-funded studies where one duplicate respondent can poison a dataset, and where methods sections need a defensible answer to "how do you know they were real?"
+- **Market research firms.** The screener criterion your clients are quietly asking about: are they a person, and are they unique?
+- **Panels and communities.** One verified human per panelist, so incentive fraud stops at signup instead of in your data cleaning.
+- **Brand trackers and repeated waves.** Uniqueness holds per wave while honest panelists breeze back in, so wave two fields faster and cleaner than wave one.
+- **B2B and expert interviews.** High incentives attract professional fakers; a face that can only qualify once ends the repeat-expert problem.
+
+## Start with your platform
+
+<div className="grid md:grid-cols-2 gap-5 mt-6">
+  <a href="/setup" className="vy-card bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 text-gray-900 dark:text-zinc-50">
+    <span className="vy-card-wm"><Icon icon="sliders" iconType="light" size={250} /></span>
+    <span className="vy-card-icon"><Icon icon="sliders" iconType="light" size={22} /></span>
+    <span className="vy-card-title">Set up on Alchemer</span>
+    <span className="vy-card-sub text-gray-500 dark:text-zinc-400">Live today. Four steps, fifteen minutes, no code.</span>
+  </a>
+  <a href="/why-it-works" className="vy-card bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 text-gray-900 dark:text-zinc-50">
+    <span className="vy-card-wm"><Icon icon="lock" iconType="light" size={250} /></span>
+    <span className="vy-card-icon"><Icon icon="lock" iconType="light" size={22} /></span>
+    <span className="vy-card-title">Why it works</span>
+    <span className="vy-card-sub text-gray-500 dark:text-zinc-400">The mechanics behind the one-time credential.</span>
+  </a>
+</div>

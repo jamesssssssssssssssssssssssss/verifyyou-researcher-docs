@@ -1,75 +1,74 @@
 ---
-title: "What your respondent sees"
-description: "Three outcomes: they pass, they get blocked, or they come back. Every screen here is the real product."
+title: "The respondent experience"
+description: "One screen at a time: the click, the scan, the pass, and the gate opening into your survey."
 icon: "mobile-screen"
 ---
 
-There are only three things that can happen when someone clicks your study link. They pass and take your survey, they get blocked and never see it, or they come back later. Here is each one, on real product screens, and what it means for you.
+Five steps, a few seconds, one screen at a time. Every screen below is the real product unless marked otherwise.
 
-## When they pass
+<Steps>
+  <Step title="They click your study link" icon="hand-pointer">
+    In Alchemer's invite, your panel, or wherever you recruit. The link opens the check, not your survey.
 
-The normal case. Click, scan, done. A few seconds, then they are answering your questions.
+    <Frame caption="Real product. 'Prove you're real. A quick face check before you continue.' One tap.">
+      <img className="vy-phone" src="/images/screen-arrive.png" alt="The handoff screen" style={{ maxWidth: '300px' }} />
+    </Frame>
+  </Step>
+  <Step title="They do the scan" icon="camera">
+    A few seconds in the camera with live prompts. No photo is shared with you or with Alchemer, only a yes or no.
 
-<div className="grid md:grid-cols-3 gap-5 mt-6">
-  <div>
-    <img className="vy-phone" src="/images/screen-arrive.png" alt="The handoff screen" />
-    <p className="mt-3 text-sm text-gray-500 dark:text-zinc-400"><b className="text-gray-900 dark:text-zinc-50">1. They arrive.</b> "Prove you're real. A quick face check before you continue." One tap. <i>(Real product, demo partner brand.)</i></p>
-  </div>
-  <div>
-    <img className="vy-phone" src="/images/screen-scan2.png" alt="The face scan" />
-    <p className="mt-3 text-sm text-gray-500 dark:text-zinc-400"><b className="text-gray-900 dark:text-zinc-50">2. The scan.</b> Live prompts like "Hold still," a few seconds. No photo is shared with you or with Alchemer, only a yes or no. <i>(Real product.)</i></p>
-  </div>
-  <div>
-    <img className="vy-phone" src="/images/screen-pass.png" alt="The success screen" />
-    <p className="mt-3 text-sm text-gray-500 dark:text-zinc-400"><b className="text-gray-900 dark:text-zinc-50">3. They pass.</b> "Thank you, human!" The return carries their one-time password straight into your Alchemer login page, already filled in. <i>(Real product, demo partner brand.)</i></p>
-  </div>
-</div>
+    <Frame caption="Real product. Live prompts guide them: 'Hold still.'">
+      <img className="vy-phone" src="/images/screen-scan2.png" alt="The face scan" style={{ maxWidth: '300px' }} />
+    </Frame>
+  </Step>
+  <Step title="They pass" icon="circle-check">
+    Live and unique, confirmed.
 
-<Frame caption="The last hop, illustrated: your Alchemer login page in your own survey theme, password already in the box. One tap and they are on your questions. This is the one screen still in design.">
-  <img className="vy-phone" src="/images/screen-gate.png" alt="Alchemer login page pre-filled" style={{ maxWidth: '340px' }} />
-</Frame>
+    <Frame caption="Real product. Complete, thank you for being human.">
+      <img className="vy-phone" src="/images/screen-pass.png" alt="The complete screen" style={{ maxWidth: '300px' }} />
+    </Frame>
+  </Step>
+  <Step title="The gate is already open" icon="unlock">
+    They land on your Alchemer login page with their one-time password filled in. Nothing to type.
 
-**Why this matters to you:** the friction lands only on the first-time check, a few seconds, and verified respondents flow into your survey without typing anything. Completion stays high while the gate stays closed.
+    <Frame caption="Illustration. The real page inherits your own survey theme. This is the one screen still in design.">
+      <img className="vy-phone" src="/images/screen-gate.png" alt="Alchemer login page pre-filled" style={{ maxWidth: '300px' }} />
+    </Frame>
+  </Step>
+  <Step title="They answer your questions" icon="list-check">
+    From here it is just your survey. The whole detour took a few seconds, and every response behind the gate is a real, unique human.
+  </Step>
+</Steps>
 
 ## When someone gets blocked
 
-Two ways to fail the check, and both end the same way: no password, no survey, no complete.
+Two ways to fail the check. Both end the same way: no password, no survey, no complete, nothing to pay.
 
 <div className="grid md:grid-cols-2 gap-5 mt-6">
   <div>
-    <img className="vy-phone" src="/images/screen-denied.png" alt="Denied screen" style={{ maxWidth: '340px', margin: '0 auto', display: 'block' }} />
-    <p className="mt-3 text-sm text-gray-500 dark:text-zinc-400 text-center"><b className="text-gray-900 dark:text-zinc-50">Not unique.</b> A face we have already seen for this study. This is your repeat taker. <i>(Real product.)</i></p>
+    <img className="vy-phone" src="/images/screen-denied.png" alt="Denied screen" style={{ maxWidth: '300px', margin: '0 auto', display: 'block' }} />
+    <p className="mt-3 text-sm text-gray-500 dark:text-zinc-400 text-center"><b className="text-gray-900 dark:text-zinc-50">Not unique.</b> A face we have already seen for this study. Your repeat taker. <i>(Real product.)</i></p>
   </div>
   <div>
-    <img className="vy-phone" src="/images/screen-liveness.png" alt="Liveness failure screen" style={{ maxWidth: '340px', margin: '0 auto', display: 'block' }} />
-    <p className="mt-3 text-sm text-gray-500 dark:text-zinc-400 text-center"><b className="text-gray-900 dark:text-zinc-50">Not live.</b> A replay, a photo, or a generated face. Real people in bad lighting get a retry; bots do not get lucky. <i>(Real product.)</i></p>
+    <img className="vy-phone" src="/images/screen-liveness.png" alt="Liveness failure screen" style={{ maxWidth: '300px', margin: '0 auto', display: 'block' }} />
+    <p className="mt-3 text-sm text-gray-500 dark:text-zinc-400 text-center"><b className="text-gray-900 dark:text-zinc-50">Not live.</b> A replay, a photo, or a generated face. Real people in bad lighting get a retry; bots do not. <i>(Real product.)</i></p>
   </div>
 </div>
 
-What happens next for a blocked respondent: they are routed back where they came from, your panel's screen-out if you set one, and that is the end of it. They never receive a password, so Alchemer's gate never opens, so they never see question one.
-
-**Why this matters to you:** a blocked respondent costs you nothing. They never become a complete, never enter your dataset, and never get paid. And because the check recognizes the **face**, not the device, they cannot try again from a new browser, a cleared cache, or a second phone. There is no side door to your survey.
+A blocked respondent is routed back where they came from, your panel's screen-out if you set one. They never get a password, so Alchemer's gate never opens. And because the check recognizes the **face**, not the device, a new browser or a second phone changes nothing.
 
 ## When they come back
 
-Two different moments, two different answers, both working for you.
-
 <div className="grid md:grid-cols-2 gap-5 mt-6">
   <div className="border border-gray-200 dark:border-zinc-800 rounded-xl p-6 bg-gray-50 dark:bg-zinc-900">
-    <p className="font-semibold text-gray-900 dark:text-zinc-50">Back to the same study</p>
-    <p className="mt-2 text-sm text-gray-500 dark:text-zinc-400">A dead end, on purpose. Their face already earned its one password, and that password is spent. Alchemer refuses it, and we refuse to mint another for the same face. One person, one response, permanently.</p>
+    <p className="font-semibold text-gray-900 dark:text-zinc-50">Same study: a dead end</p>
+    <p className="mt-2 text-sm text-gray-500 dark:text-zinc-400">Their face already earned its one password, and it is spent. One person, one response, permanently.</p>
   </div>
   <div className="border border-gray-200 dark:border-zinc-800 rounded-xl p-6 bg-gray-50 dark:bg-zinc-900">
-    <p className="font-semibold text-gray-900 dark:text-zinc-50">Back for your next study</p>
-    <p className="mt-2 text-sm text-gray-500 dark:text-zinc-400">Welcome back. A returning verified human is recognized, breezes through with less friction, and gets a fresh one-time password for the new study. Uniqueness still holds per study, and you are never charged twice for the same human.</p>
+    <p className="font-semibold text-gray-900 dark:text-zinc-50">Your next study: welcome back</p>
+    <p className="mt-2 text-sm text-gray-500 dark:text-zinc-400">Recognized, less friction, and a fresh one-time password for the new study. You are never charged twice for the same human.</p>
   </div>
 </div>
-
-<Frame caption="Real product: the return moment. A respondent can attach their number or email once, and their verified status follows them across devices and future studies.">
-  <img className="vy-phone" src="/images/screen-return.png" alt="Attach your number once" style={{ maxWidth: '340px' }} />
-</Frame>
-
-**Why this matters to you:** repeat takers are locked out of each study forever, but your honest panelists are not punished for coming back. Your next wave fields faster, with less drop-off, at no extra verification cost. And if you want maximum strictness instead, a full re-scan on every study is a setting, and it is your call.
 
 ## Keep going
 
@@ -77,13 +76,13 @@ Two different moments, two different answers, both working for you.
   <a href="/setup" className="vy-card bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 text-gray-900 dark:text-zinc-50">
     <span className="vy-card-wm"><Icon icon="sliders" iconType="light" size={250} /></span>
     <span className="vy-card-icon"><Icon icon="sliders" iconType="light" size={22} /></span>
-    <span className="vy-card-title">Set it up</span>
+    <span className="vy-card-title">The surveyor setup</span>
     <span className="vy-card-sub text-gray-500 dark:text-zinc-400">Four steps, fifteen minutes, no code.</span>
   </a>
   <a href="/why-it-works" className="vy-card bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 text-gray-900 dark:text-zinc-50">
     <span className="vy-card-wm"><Icon icon="lock" iconType="light" size={250} /></span>
     <span className="vy-card-icon"><Icon icon="lock" iconType="light" size={22} /></span>
     <span className="vy-card-title">Why it works</span>
-    <span className="vy-card-sub text-gray-500 dark:text-zinc-400">The one-time password, the uniqueness lock, and your export.</span>
+    <span className="vy-card-sub text-gray-500 dark:text-zinc-400">One password, one human, one use.</span>
   </a>
 </div>

@@ -20,10 +20,36 @@
     },
     "navigation": {
         "tabs": [
-            { "tab": "Home", "pages": ["home"] },
-            { "tab": "Set up", "pages": ["setup"] },
-            { "tab": "Respondent flow", "pages": ["respondent-flow"] },
-            { "tab": "Why it works", "pages": ["why-it-works"] }
+            {
+                "tab": "Home",
+                "pages": [
+                    "home"
+                ]
+            },
+            {
+                "tab": "Set up",
+                "pages": [
+                    "setup"
+                ]
+            },
+            {
+                "tab": "Respondent experience",
+                "pages": [
+                    "respondent-flow"
+                ]
+            },
+            {
+                "tab": "Why it works",
+                "pages": [
+                    "why-it-works"
+                ]
+            },
+            {
+                "tab": "Any platform",
+                "pages": [
+                    "any-platform"
+                ]
+            }
         ]
     },
     "navbar": {
@@ -34,7 +60,12 @@
         }
     },
     "contextual": {
-        "options": ["copy", "view", "claude", "chatgpt"]
+        "options": [
+            "copy",
+            "view",
+            "claude",
+            "chatgpt"
+        ]
     },
     "footer": {
         "socials": {
