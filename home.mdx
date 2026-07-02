@@ -5,13 +5,24 @@ mode: "custom"
 ---
 
 <div className="vy-hero max-w-7xl mx-auto px-6">
-  <div className="max-w-3xl">
+  <div className="vy-hero-grid">
+
+    <div>
 
       <p className="vy-kicker">VerifyYou on Alchemer</p>
 
       <h1 className="mt-3 text-gray-900 dark:text-zinc-50">Every response from a real, unique human</h1>
 
-      <p className="mt-4 text-lg text-gray-500 dark:text-zinc-400">A quick face check before your first question. In about five seconds it proves your respondent is live and unique, without ever storing their image; your survey only sees a yes or no. About two cents a verification, no code, and it is the strongest, cheapest signal on verified sample there is. The doubt about who is really answering goes away.</p>
+      <p className="mt-4 text-lg text-gray-500 dark:text-zinc-400">VerifyYou checks that each respondent is a live, present, and unique human, in about five seconds, before they ever reach your study. Bots and returning humans are locked out automatically. About two cents a verification, no code, and it is the strongest, cheapest signal on verified sample there is. The doubt about who is really answering goes away.</p>
+
+    </div>
+
+    <a href="/how-it-works" className="vy-card vy-hero-side bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 text-gray-900 dark:text-zinc-50">
+      <span className="vy-card-wm"><Icon icon="lock" iconType="light" size={250} /></span>
+      <span className="vy-card-icon"><Icon icon="lock" iconType="light" size={22} /></span>
+      <span className="vy-card-title">See how it works</span>
+      <span className="vy-card-sub text-gray-500 dark:text-zinc-400">One password, one human, one use. The whole mechanism in plain terms.</span>
+    </a>
 
   </div>
 
@@ -25,21 +36,28 @@ mode: "custom"
     <div className="vy-car">
       <div className="vy-car-glow"></div>
       <div id="sl1" className="vy-car-slide" data-pos="0">
-        <p className="vy-sp-text text-gray-900 dark:text-zinc-50">Each verified respondent receives a one-time passcode, minted for their face alone and dropped onto their link. It fills itself in at your survey's gate.</p>
+        <span className="vy-num vy-car-num">1</span>
+        <p className="vy-sp-text text-gray-900 dark:text-zinc-50">Each verified respondent receives a one-time passcode, created for their face alone and dropped onto their link. It fills itself in at your survey's gate.</p>
         <img className="vy-sp-img" src="/images/mock-create.png" alt="Your study link and one-time passwords" />
       </div>
       <div id="sl2" className="vy-car-slide" data-pos="1">
+        <span className="vy-num vy-car-num">2</span>
         <p className="vy-sp-text text-gray-900 dark:text-zinc-50">Bots and returning humans get locked out. A duplicate face never earns a second passcode, and a spent passcode is dead forever.</p>
         <img className="vy-sp-img vy-sp-phone" src="/images/screen-denied.png" alt="A blocked respondent" />
       </div>
       <div id="sl3" className="vy-car-slide" data-pos="2">
+        <span className="vy-num vy-car-num">3</span>
         <p className="vy-sp-text text-gray-900 dark:text-zinc-50">You only pay for real, first-time respondents. Blocked traffic never becomes a complete, never enters your data, and never gets paid.</p>
         <img className="vy-sp-img" src="/images/vy-real-activity-log.png" alt="The activity log" />
       </div>
       <div id="sl4" className="vy-car-slide" data-pos="3">
+        <span className="vy-num vy-car-num">4</span>
         <p className="vy-sp-text text-gray-900 dark:text-zinc-50">Less time reconciling data, and no spend on illegitimate responses. Every row in your export carries the check.</p>
         <img className="vy-sp-img" src="/images/alchemer-urlvar-exports.png" alt="The verified column in your export" />
       </div>
+    </div>
+    <div className="vy-car-nav">
+      <button className="vy-car-arrow" aria-label="Previous stage" onClick={() => { const s = Array.from(document.querySelectorAll('.vy-car-slide')); for (const el of s) el.setAttribute('data-pos', String((parseInt(el.getAttribute('data-pos'), 10) + 1) % 4)); for (const el of document.querySelectorAll('.vy-st')) el.classList.remove('vy-on'); const f = s.find((el) => el.getAttribute('data-pos') === '0'); document.getElementById('st' + f.id.slice(2)).classList.add('vy-on'); }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="m15 5-7 7 7 7" /></svg></button>
       <button className="vy-car-arrow" aria-label="Next stage" onClick={() => { const s = Array.from(document.querySelectorAll('.vy-car-slide')); for (const el of s) el.setAttribute('data-pos', String((parseInt(el.getAttribute('data-pos'), 10) + 3) % 4)); for (const el of document.querySelectorAll('.vy-st')) el.classList.remove('vy-on'); const f = s.find((el) => el.getAttribute('data-pos') === '0'); document.getElementById('st' + f.id.slice(2)).classList.add('vy-on'); }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="m9 5 7 7-7 7" /></svg></button>
     </div>
   </div>

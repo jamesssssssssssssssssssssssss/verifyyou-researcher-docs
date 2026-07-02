@@ -202,7 +202,7 @@
 
 /* Liquid-glass number chips: translucent, blurred, hairline border, soft top highlight */
 .vy-card-title .vy-num { margin-right: 0.55rem; vertical-align: 2px; }
-.vy-hl-row .vy-num, .vy-card-title .vy-num {
+.vy-hl-row .vy-num, .vy-card-title .vy-num, .vy-st .vy-num, .vy-car-slide .vy-num {
   color: rgba(75, 85, 99, 0.9);
   background: rgba(0, 0, 0, 0.04);
   border: 1px solid rgba(0, 0, 0, 0.10);
@@ -210,7 +210,7 @@
   -webkit-backdrop-filter: blur(10px) saturate(1.4);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), inset 0 -1px 1px rgba(0, 0, 0, 0.04);
 }
-.dark .vy-hl-row .vy-num, .dark .vy-card-title .vy-num {
+.dark .vy-hl-row .vy-num, .dark .vy-card-title .vy-num, .dark .vy-st .vy-num, .dark .vy-car-slide .vy-num {
   color: rgba(212, 212, 216, 0.9);
   background: rgba(255, 255, 255, 0.07);
   border-color: rgba(255, 255, 255, 0.14);
@@ -218,15 +218,18 @@
 }
 
 /* Liquid-glass circular carousel (home hero): front card center, others recede behind to the right */
-.vy-car-wrap { max-width: 62rem; }
-.vy-st-row { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-bottom: 1.25rem; }
+.vy-hero-grid { display: grid; grid-template-columns: 1.7fr 1fr; gap: 2.5rem; align-items: center; max-width: 62rem; margin: 0 auto; }
+.vy-hero-side { min-height: 200px; }
+@media (max-width: 860px) { .vy-hero-grid { grid-template-columns: 1fr; gap: 1.5rem; } .vy-hero-side { min-height: 150px; } }
+.vy-car-wrap { max-width: 62rem; margin-left: auto; margin-right: auto; }
+.vy-st-row { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-bottom: 1.25rem; justify-content: center; }
 .vy-st { display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.45rem 0.9rem 0.45rem 0.5rem; border: 1px solid rgba(127, 127, 127, 0.22); border-radius: 999px; background: transparent; font: 600 0.88rem/1.2 Inter, sans-serif; color: #8a8f98; cursor: pointer; transition: border-color 0.15s ease, color 0.15s ease; }
 .vy-st:hover { border-color: rgba(22, 163, 74, 0.45); }
 .vy-st.vy-on { color: inherit; border-color: rgba(22, 163, 74, 0.55); }
 
 .vy-car { position: relative; height: 440px; }
 .vy-car-glow {
-  position: absolute; inset: 6% 14% 6% 6%; z-index: 0; pointer-events: none;
+  position: absolute; inset: 6% 10%; z-index: 0; pointer-events: none;
   background: radial-gradient(closest-side, rgba(52, 168, 83, 0.22), rgba(52, 168, 83, 0.08) 55%, transparent 78%);
   filter: blur(34px);
 }
@@ -234,9 +237,9 @@
   background: radial-gradient(closest-side, rgba(52, 168, 83, 0.30), rgba(52, 168, 83, 0.10) 55%, transparent 78%);
 }
 .vy-car-slide {
-  position: absolute; inset: 0 76px 0 0;
+  position: absolute; inset: 0 72px;
   display: grid; grid-template-columns: 1.05fr 1fr; gap: 2rem; align-items: center;
-  padding: 2rem 2.2rem; border-radius: 26px; overflow: hidden;
+  padding: 2.4rem 2.2rem 2rem; border-radius: 26px; overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.10);
   background: linear-gradient(150deg, rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.34));
   backdrop-filter: blur(18px) saturate(1.4); -webkit-backdrop-filter: blur(18px) saturate(1.4);
@@ -249,6 +252,7 @@
   background: linear-gradient(150deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.03));
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16), 0 22px 48px rgba(0, 0, 0, 0.45);
 }
+.vy-car-num { position: absolute; top: 1.15rem; left: 1.35rem; }
 /* Chromium's backdrop-filter sampling leaks receded-card content even at opacity:0 /
    visibility:hidden (filtered+faded parents keep composited child layers). display:none is the
    only hide that truly stops the paint; entering content fades in via @starting-style. */
@@ -257,13 +261,14 @@
 @starting-style {
   .vy-car-slide[data-pos="0"] > * { opacity: 0; }
 }
+/* Centered deck: front card center, previous peeks left, next peeks right, spare card behind */
 .vy-car-slide[data-pos="0"] { transform: translateX(0) scale(1); opacity: 1; z-index: 40; filter: none; }
-.vy-car-slide[data-pos="1"] { transform: translateX(36px) scale(0.955); opacity: 0.55; z-index: 30; filter: blur(2px) saturate(0.85); pointer-events: none; }
-.vy-car-slide[data-pos="2"] { transform: translateX(64px) scale(0.915); opacity: 0.32; z-index: 20; filter: blur(4px) saturate(0.75); pointer-events: none; }
-.vy-car-slide[data-pos="3"] { transform: translateX(86px) scale(0.88); opacity: 0.16; z-index: 10; filter: blur(6px) saturate(0.7); pointer-events: none; }
+.vy-car-slide[data-pos="1"] { transform: translateX(54px) scale(0.94); opacity: 0.6; z-index: 25; filter: blur(2px) saturate(0.85); pointer-events: none; }
+.vy-car-slide[data-pos="2"] { transform: translateX(0) scale(0.9); opacity: 0.25; z-index: 15; filter: blur(4px) saturate(0.75); pointer-events: none; }
+.vy-car-slide[data-pos="3"] { transform: translateX(-54px) scale(0.94); opacity: 0.6; z-index: 25; filter: blur(2px) saturate(0.85); pointer-events: none; }
+.vy-car-nav { display: flex; justify-content: center; gap: 0.9rem; margin-top: 1.2rem; }
 .vy-car-arrow {
-  position: absolute; right: 0; top: 50%; transform: translateY(-50%);
-  width: 54px; height: 54px; border-radius: 999px; z-index: 50; cursor: pointer;
+  width: 50px; height: 50px; border-radius: 999px; cursor: pointer;
   display: grid; place-items: center; color: rgba(55, 65, 81, 0.95);
   border: 1px solid rgba(0, 0, 0, 0.10);
   background: linear-gradient(160deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.38));
@@ -271,8 +276,8 @@
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75), inset 0 -1px 1px rgba(0, 0, 0, 0.05), 0 12px 26px rgba(0, 0, 0, 0.16);
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
-.vy-car-arrow:hover { transform: translateY(-50%) scale(1.07); border-color: rgba(22, 163, 74, 0.45); }
-.vy-car-arrow:active { transform: translateY(-50%) scale(0.95); }
+.vy-car-arrow:hover { transform: scale(1.07); border-color: rgba(22, 163, 74, 0.45); }
+.vy-car-arrow:active { transform: scale(0.95); }
 .dark .vy-car-arrow {
   color: rgba(228, 228, 231, 0.95);
   border-color: rgba(255, 255, 255, 0.20);
@@ -280,17 +285,85 @@
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22), inset 0 -1px 1px rgba(0, 0, 0, 0.3), 0 12px 26px rgba(0, 0, 0, 0.5);
 }
 .vy-sp-text { font-size: 1.08rem; line-height: 1.6; font-weight: 500; }
-.vy-sp-img { max-height: 330px; width: auto; max-width: 100%; justify-self: center; border-radius: 12px; border: 1px solid rgba(127, 127, 127, 0.18); }
+.vy-sp-img { max-height: 320px; width: auto; max-width: 100%; justify-self: center; border-radius: 12px; border: 1px solid rgba(127, 127, 127, 0.18); }
 .vy-sp-phone { border: none; border-radius: 0; filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.35)); }
 @media (max-width: 860px) {
-  .vy-car { height: 590px; }
-  .vy-car-slide { inset: 0 46px 0 0; grid-template-columns: 1fr; gap: 1.1rem; align-content: center; padding: 1.4rem 1.5rem; }
+  .vy-car { height: 610px; }
+  .vy-car-slide { inset: 0 34px; grid-template-columns: 1fr; gap: 1.1rem; align-content: center; padding: 2.2rem 1.5rem 1.4rem; }
   .vy-car-slide .vy-sp-img { max-height: 300px; }
-  .vy-car-slide[data-pos="1"] { transform: translateX(22px) scale(0.96); }
-  .vy-car-slide[data-pos="2"] { transform: translateX(38px) scale(0.925); }
-  .vy-car-slide[data-pos="3"] { transform: translateX(52px) scale(0.895); }
+  .vy-car-slide[data-pos="1"] { transform: translateX(26px) scale(0.94); }
+  .vy-car-slide[data-pos="3"] { transform: translateX(-26px) scale(0.94); }
   .vy-car-arrow { width: 44px; height: 44px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .vy-car-slide { transition-duration: 0.15s; }
 }
+
+/* Liquid-glass number circles on Mintlify's <Steps> */
+[data-component-part="step-number"] > div {
+  background: rgba(0, 0, 0, 0.04) !important;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  backdrop-filter: blur(10px) saturate(1.4); -webkit-backdrop-filter: blur(10px) saturate(1.4);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), inset 0 -1px 1px rgba(0, 0, 0, 0.04);
+  color: rgba(75, 85, 99, 0.9);
+}
+.dark [data-component-part="step-number"] > div {
+  background: rgba(255, 255, 255, 0.07) !important;
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), inset 0 -1px 1px rgba(0, 0, 0, 0.25);
+  color: rgba(212, 212, 216, 0.9);
+}
+
+/* Lettered substeps inside a Step: small liquid-glass markers */
+.vy-sub { list-style: none; margin: 0.6rem 0 0.9rem; padding: 0; counter-reset: vysub; }
+.vy-sub li { counter-increment: vysub; position: relative; padding-left: 2.35rem; margin: 0.55rem 0; }
+.vy-sub li::before {
+  content: counter(vysub, lower-alpha);
+  position: absolute; left: 0; top: 0.05rem; width: 1.55rem; height: 1.55rem; border-radius: 999px;
+  display: grid; place-items: center; font: 600 0.72rem/1 Inter, sans-serif;
+  color: rgba(75, 85, 99, 0.9); background: rgba(0, 0, 0, 0.04); border: 1px solid rgba(0, 0, 0, 0.10);
+  backdrop-filter: blur(10px) saturate(1.4); -webkit-backdrop-filter: blur(10px) saturate(1.4);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), inset 0 -1px 1px rgba(0, 0, 0, 0.04);
+}
+.dark .vy-sub li::before {
+  color: rgba(212, 212, 216, 0.9); background: rgba(255, 255, 255, 0.07); border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), inset 0 -1px 1px rgba(0, 0, 0, 0.25);
+}
+
+/* "You now have" outcome row */
+.vy-have {
+  margin-top: 0.85rem; padding: 0.65rem 0.95rem; border-radius: 12px;
+  border: 1px solid rgba(22, 163, 74, 0.28); background: rgba(52, 168, 83, 0.06);
+  font-size: 0.95rem;
+}
+
+/* The fork: one path in, two ways out */
+.vy-fork { max-width: 470px; margin: 1.6rem auto 0.5rem; text-align: center; }
+.vy-fork-top {
+  display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1.05rem; border-radius: 999px;
+  font: 600 0.88rem/1.2 Inter, sans-serif; color: inherit;
+  background: rgba(0, 0, 0, 0.04); border: 1px solid rgba(0, 0, 0, 0.10);
+  backdrop-filter: blur(10px) saturate(1.4); -webkit-backdrop-filter: blur(10px) saturate(1.4);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), inset 0 -1px 1px rgba(0, 0, 0, 0.04);
+}
+.dark .vy-fork-top {
+  background: rgba(255, 255, 255, 0.07); border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), inset 0 -1px 1px rgba(0, 0, 0, 0.25);
+}
+.vy-fork-lines { display: block; width: 100%; height: 78px; color: rgba(127, 127, 127, 0.55); margin: 2px 0; }
+.vy-fork-row { display: flex; gap: 1rem; }
+.vy-fork-pill {
+  flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  padding: 0.6rem 0.9rem; border-radius: 999px; font: 600 0.85rem/1.2 Inter, sans-serif;
+  background: rgba(0, 0, 0, 0.04); border: 1px solid rgba(0, 0, 0, 0.10);
+  backdrop-filter: blur(10px) saturate(1.4); -webkit-backdrop-filter: blur(10px) saturate(1.4);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), inset 0 -1px 1px rgba(0, 0, 0, 0.04);
+}
+.dark .vy-fork-pill {
+  background: rgba(255, 255, 255, 0.07); border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), inset 0 -1px 1px rgba(0, 0, 0, 0.25);
+}
+.vy-fork-pass { border-color: rgba(22, 163, 74, 0.5); }
+.vy-fork-pass .vy-fork-ic { color: #16A34A; display: inline-flex; }
+.vy-fork-fail { border-color: rgba(220, 38, 38, 0.35); }
+.vy-fork-fail .vy-fork-ic { color: rgba(220, 38, 38, 0.8); display: inline-flex; }

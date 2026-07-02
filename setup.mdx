@@ -1,6 +1,6 @@
 ---
 title: "Researcher setup"
-description: "Four steps, two tools, about fifteen minutes. Once per study, no code."
+description: "Five steps, two tools, about fifteen minutes. Once per study, no code."
 icon: "sliders"
 ---
 
@@ -9,46 +9,67 @@ icon: "sliders"
 Five steps, two tools, about fifteen minutes. Once per study, no code anywhere.
 
 <Steps>
-  <Step title="Create your survey" icon="pen-to-square">
-    Build your survey in Alchemer exactly as you normally would, with one difference: leave **page 1 empty**. Your questions start on page 2, and page 1 is where the gate goes.
+  <Step title="Create your survey">
+    In Alchemer, exactly as you normally would, with one difference.
 
-    **You now have:** a normal Alchemer survey with an empty first page.
+    <ol className="vy-sub">
+      <li>Build your survey as usual.</li>
+      <li>Leave **page 1 empty**: your questions start on page 2. Page 1 is where the gate goes.</li>
+    </ol>
+
+    <p className="vy-have"><strong>You now have:</strong> a normal Alchemer survey with an empty first page.</p>
   </Step>
-  <Step title="Create a verification and paste your survey link" icon="circle-plus">
-    In the VerifyYou dashboard: click **New verification**, name the study, and pick **Alchemer** under "Where does your survey live?". That choice is how we know to mint one-time passwords, the credential Alchemer's own gate understands. Paste your Alchemer survey link and click **Create verification**.
+  <Step title="Create a verification and paste your survey link">
+    In the VerifyYou dashboard.
 
-    **You now have:** your **study link** (the one you share, your Alchemer link stays private) and your **one-time password list**.
+    <ol className="vy-sub">
+      <li>Click **New verification** and name the study.</li>
+      <li>Under **"Where does your survey live?"** pick **Alchemer**. That choice is how we know to create one-time passwords, the credential Alchemer's own gate understands.</li>
+      <li>Paste your Alchemer survey link and click **Create verification**.</li>
+    </ol>
+
+    <p className="vy-have"><strong>You now have:</strong> your <strong>study link</strong> (the one you share, your Alchemer link stays private) and your <strong>one-time password list</strong>.</p>
 
     <Frame caption="Dashboard mockup, a simple screen we are finishing now. What powers it, the hosted check and per-person single-use credentials, is live in the product today.">
       <img src="/images/mock-create.png" alt="VerifyYou new verification screen" />
     </Frame>
   </Step>
-  <Step title="Add your passwords to Alchemer" icon="key">
-    On **page 1** of your survey, click **Add New: Action**, pick **Login/Password**, and choose **"Individual (one-time) passwords that deactivate after use."** Paste your password list, one per line. Keep this action alone on page 1.
+  <Step title="Add your passwords to Alchemer">
+    On **page 1** of your survey.
+
+    <ol className="vy-sub">
+      <li>Click **Add New: Action** and pick **Login/Password**.</li>
+      <li>Choose **"Individual (one-time) passwords that deactivate after use."**</li>
+      <li>Paste your password list, one per line, and save. Keep this action alone on page 1.</li>
+    </ol>
 
     This is Alchemer's own [Login/Password action](https://help.alchemer.com/help/login-password-action), and that is Alchemer's own wording: each password deactivates after use. Their server enforces the gate before a single question shows.
 
-    **You now have:** a survey that refuses anyone without a valid, unused password.
+    <p className="vy-have"><strong>You now have:</strong> a survey that refuses anyone without a valid, unused password.</p>
 
     <Frame caption="Alchemer's own UI: the one-time password mode, pasted one per line.">
       <img src="/images/alchemer-login-editor-2.png" alt="Alchemer one-time passwords editor" />
     </Frame>
   </Step>
-  <Step title="Set the password to fill itself in" icon="wand-magic-sparkles">
-    In the same action, open the **Display** tab and set **Pre-populate Password** to the merge code `[url("vypw")]`. Click **Save Action**.
+  <Step title="Set the password to fill itself in">
+    In the same Login/Password action.
 
-    Optional, for a fully invisible gate: on page 1's **Logic** tab, turn on **Automatically Submit Page**. This is Alchemer's own documented recipe for [automatically logging a respondent in](https://help.alchemer.com/help/include-login-action-credentials-in-an-email-campaign-message), and with it a verified respondent goes straight from the check to your questions without ever seeing the login page.
+    <ol className="vy-sub">
+      <li>Open the **Display** tab.</li>
+      <li>Set **Pre-populate Password** to the merge code `[url("vypw")]` and click **Save Action**.</li>
+      <li>Optional, for a fully invisible gate: on page 1's **Logic** tab, turn on **Automatically Submit Page**. This is Alchemer's own documented recipe for [automatically logging a respondent in](https://help.alchemer.com/help/include-login-action-credentials-in-an-email-campaign-message), and with it a verified respondent goes straight from the check to your questions without ever seeing the login page.</li>
+    </ol>
 
-    **You now have:** a gate that opens itself for verified respondents. The password lands in the box on its own, and with auto-submit on, they never even see the page.
+    <p className="vy-have"><strong>You now have:</strong> a gate that opens itself for verified respondents. The password lands in the box on its own, and with auto-submit on, they never even see the page.</p>
 
     <Frame caption="Alchemer's own UI. The example shown uses a contact merge code; yours uses the URL one above.">
       <img src="/images/alchemer-prepopulate.png" alt="Alchemer pre-populate password setting" />
     </Frame>
   </Step>
-  <Step title="Share your study link" icon="share-nodes">
+  <Step title="Share your study link">
     Paste the study link from step 2 into your panel, your sample provider, or your invite email.
 
-    **You now have:** a fielded study where everyone who reaches your survey came through the check. That's the whole setup.
+    <p className="vy-have"><strong>You now have:</strong> a fielded study where everyone who reaches your survey came through the check. That's the whole setup.</p>
   </Step>
 </Steps>
 
