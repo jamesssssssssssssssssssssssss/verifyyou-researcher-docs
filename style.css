@@ -380,3 +380,17 @@
 .vy-fork-lane { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
 .vy-fork-lane .vy-fork-pill { flex: none; }
 .vy-fork-drop { height: 40px; width: 20px; color: rgba(127, 127, 127, 0.55); }
+
+/* Terminal X in the fail card: the lane visibly ends */
+.vy-dead { display: grid; place-items: center; margin-top: 1.6rem; padding: 3.2rem 0; }
+.vy-dead-x {
+  width: 88px; height: 88px; border-radius: 999px; display: grid; place-items: center;
+  color: rgba(220, 38, 38, 0.8);
+  background: rgba(0, 0, 0, 0.04); border: 1px solid rgba(220, 38, 38, 0.35);
+  backdrop-filter: blur(10px) saturate(1.4); -webkit-backdrop-filter: blur(10px) saturate(1.4);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), inset 0 -1px 1px rgba(0, 0, 0, 0.04);
+}
+.dark .vy-dead-x {
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16), inset 0 -1px 1px rgba(0, 0, 0, 0.25);
+}
