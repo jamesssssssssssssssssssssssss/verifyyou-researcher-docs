@@ -13,7 +13,7 @@ mode: "custom"
 
       <h1 className="mt-3 text-gray-900 dark:text-zinc-50">Every response from a real, unique human</h1>
 
-      <p className="mt-4 text-lg text-gray-500 dark:text-zinc-400">VerifyYou checks that each respondent is a live, present, and unique human, in about five seconds, before they ever reach your study. Bots and returning humans are locked out automatically. Two cents a verification, no code.</p>
+      <p className="mt-4 text-lg text-gray-500 dark:text-zinc-400">HumanCheck locks bots and repeat humans out before they ever reach your study.</p>
 
     </div>
 
@@ -36,17 +36,41 @@ mode: "custom"
       <div id="sl1" className="vy-car-slide" data-pos="0">
         <span className="vy-num vy-car-num">1</span>
         <p className="vy-sp-text text-gray-900 dark:text-zinc-50">Each verified respondent receives a one-time passcode, created for their face alone and dropped onto their link. It fills itself in at your survey's gate.</p>
-        <img className="vy-sp-img" src="/images/mock-create-panel.png" alt="Your study link and one-time passwords" />
+        <div className="vy-viz">
+          <div className="vy-viz-head"><span className="vy-viz-headico"><Icon icon="lock" iconType="light" size={13} /></span>One-time passcode</div>
+          <div className="vy-viz-field"><span className="vy-viz-code">vyp_k2•••••••4qt</span><span className="vy-viz-check"><Icon icon="circle-check" iconType="light" size={16} /></span></div>
+          <div className="vy-viz-sub">Filled in from their link. Used once, then dead.</div>
+        </div>
       </div>
       <div id="sl2" className="vy-car-slide" data-pos="1">
         <span className="vy-num vy-car-num">2</span>
         <p className="vy-sp-text text-gray-900 dark:text-zinc-50">Bots and returning humans get locked out. A duplicate face never earns a second passcode, and a spent passcode is dead forever.</p>
-        <img className="vy-sp-img vy-sp-phone" src="/images/screen-denied.png" alt="A blocked respondent" />
+        <div className="vy-viz">
+          <div className="vy-viz-lane">
+            <span className="vy-viz-ico"><Icon icon="user" iconType="light" size={17} /></span>
+            <svg className="vy-viz-arrow" viewBox="0 0 64 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 8 h52" stroke="currentColor" strokeWidth="1.5" /><path d="M48 3 L56 8 L48 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+            <span className="vy-viz-out vy-viz-pass"><span className="vy-viz-outico"><Icon icon="check" iconType="light" size={13} /></span>Into the survey</span>
+          </div>
+          <div className="vy-viz-lane">
+            <span className="vy-viz-ico"><Icon icon="robot" iconType="light" size={17} /></span>
+            <svg className="vy-viz-arrow" viewBox="0 0 64 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 8 h38" stroke="currentColor" strokeWidth="1.5" /><path d="M46 2 v12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>
+            <span className="vy-viz-out vy-viz-fail"><span className="vy-viz-outico"><Icon icon="xmark" iconType="light" size={13} /></span>Blocked</span>
+          </div>
+          <div className="vy-viz-lane">
+            <span className="vy-viz-ico"><Icon icon="user-group" iconType="light" size={17} /></span>
+            <svg className="vy-viz-arrow" viewBox="0 0 64 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 8 h38" stroke="currentColor" strokeWidth="1.5" /><path d="M46 2 v12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>
+            <span className="vy-viz-out vy-viz-fail"><span className="vy-viz-outico"><Icon icon="xmark" iconType="light" size={13} /></span>Same face, second try</span>
+          </div>
+        </div>
       </div>
       <div id="sl3" className="vy-car-slide" data-pos="2">
         <span className="vy-num vy-car-num">3</span>
         <p className="vy-sp-text text-gray-900 dark:text-zinc-50">You only pay for real, first-time respondents. Blocked traffic never enters your data and never gets paid.</p>
-        <img className="vy-sp-img" src="/images/activity-log-rows.png" alt="Who verified, when, and the trust level" />
+        <div className="vy-viz">
+          <div className="vy-viz-row"><span className="vy-viz-id">al•••@company.com</span><span className="vy-viz-tag">Verified</span><span className="vy-viz-pill vy-viz-hi">92%</span></div>
+          <div className="vy-viz-row"><span className="vy-viz-id">unknown device</span><span className="vy-viz-tag">Blocked</span><span className="vy-viz-pill vy-viz-no"><Icon icon="xmark" iconType="light" size={11} /></span></div>
+          <div className="vy-viz-row"><span className="vy-viz-id">jo•••@company.com</span><span className="vy-viz-tag">Verified</span><span className="vy-viz-pill vy-viz-mid">61%</span></div>
+        </div>
       </div>
     </div>
     <div className="vy-car-nav">
@@ -98,7 +122,7 @@ mode: "custom"
 
   <h2 className="mt-2 text-2xl font-semibold text-gray-900 dark:text-zinc-50">Protect your survey</h2>
 
-  <p className="mt-2 text-gray-500 dark:text-zinc-400 max-w-3xl">VerifyYou grants a one-time password to each verified respondent, so each human can take the study once, and repeat takers and bots get locked out. Alchemer's own <a href="https://help.alchemer.com/help/login-password-action">Login/Password action</a> enforces it before your first question.</p>
+  <p className="mt-2 text-gray-500 dark:text-zinc-400 max-w-3xl">A one-time password per verified human, enforced by Alchemer's own gate before your first question.</p>
 
   <div className="mt-6">
 

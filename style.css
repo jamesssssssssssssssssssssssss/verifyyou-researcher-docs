@@ -385,3 +385,60 @@
   background: rgba(255, 255, 255, 0.06);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16), inset 0 -1px 1px rgba(0, 0, 0, 0.25);
 }
+
+/* Designed glass graphics inside the carousel (replace raw screenshots) */
+.vy-viz {
+  justify-self: center; width: 100%; max-width: 350px;
+  padding: 1.25rem 1.35rem; border-radius: 16px;
+  display: flex; flex-direction: column; gap: 0.7rem;
+  background: rgba(255, 255, 255, 0.55); border: 1px solid rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(12px) saturate(1.3); -webkit-backdrop-filter: blur(12px) saturate(1.3);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+.dark .vy-viz {
+  background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 14px 30px rgba(0, 0, 0, 0.35);
+}
+.vy-viz-head { display: flex; align-items: center; gap: 0.45rem; font: 600 0.72rem/1 Inter, sans-serif; letter-spacing: 0.1em; text-transform: uppercase; color: #8a8f98; }
+.vy-viz-headico { display: inline-flex; }
+.vy-viz-field {
+  display: flex; align-items: center; justify-content: space-between; gap: 0.8rem;
+  padding: 0.85rem 1rem; border-radius: 11px;
+  background: rgba(100, 110, 125, 0.10); border: 1px solid rgba(100, 110, 125, 0.22);
+}
+.dark .vy-viz-field { background: rgba(255, 255, 255, 0.07); border-color: rgba(255, 255, 255, 0.14); }
+.vy-viz-code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 1rem; letter-spacing: 0.05em; }
+.vy-viz-check { display: inline-flex; color: #16A34A; }
+.vy-viz-sub { font-size: 0.82rem; color: #8a8f98; }
+.vy-viz-lane { display: flex; align-items: center; gap: 0.6rem; }
+.vy-viz-ico {
+  width: 38px; height: 38px; border-radius: 999px; display: grid; place-items: center; flex: none;
+  background: rgba(100, 110, 125, 0.10); border: 1px solid rgba(100, 110, 125, 0.22);
+}
+.dark .vy-viz-ico { background: rgba(255, 255, 255, 0.07); border-color: rgba(255, 255, 255, 0.14); }
+.vy-viz-arrow { height: 15px; flex: 1 1 auto; min-width: 34px; color: rgba(127, 127, 127, 0.55); }
+.vy-viz-out {
+  display: inline-flex; align-items: center; gap: 0.45rem; flex: none;
+  padding: 0.42rem 0.8rem; border-radius: 999px; font: 600 0.8rem/1.2 Inter, sans-serif;
+  border: 1px solid rgba(127, 127, 127, 0.25);
+}
+.vy-viz-outico { display: inline-flex; }
+.vy-viz-pass { border-color: rgba(22, 163, 74, 0.5); }
+.vy-viz-pass .vy-viz-outico { color: #16A34A; }
+.vy-viz-fail { border-color: rgba(220, 38, 38, 0.35); }
+.vy-viz-fail .vy-viz-outico { color: rgba(220, 38, 38, 0.8); }
+.vy-viz-row {
+  display: flex; align-items: center; gap: 0.7rem;
+  padding: 0.6rem 0.85rem; border-radius: 11px;
+  background: rgba(100, 110, 125, 0.07); border: 1px solid rgba(100, 110, 125, 0.16);
+}
+.dark .vy-viz-row { background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.10); }
+.vy-viz-id { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.84rem; flex: 1 1 auto; }
+.vy-viz-tag { font-size: 0.76rem; color: #8a8f98; flex: none; }
+.vy-viz-pill {
+  min-width: 44px; height: 24px; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center;
+  font: 600 0.76rem/1 Inter, sans-serif; flex: none; padding: 0 0.5rem;
+}
+.vy-viz-hi { color: #16A34A; background: rgba(22, 163, 74, 0.10); border: 1px solid rgba(22, 163, 74, 0.4); }
+.vy-viz-mid { color: #B45309; background: rgba(217, 119, 6, 0.10); border: 1px solid rgba(217, 119, 6, 0.4); }
+.vy-viz-no { color: rgba(220, 38, 38, 0.85); background: rgba(220, 38, 38, 0.08); border: 1px solid rgba(220, 38, 38, 0.35); }
