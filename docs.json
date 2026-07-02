@@ -52,13 +52,6 @@
             }
         ]
     },
-    "navbar": {
-        "primary": {
-            "type": "button",
-            "label": "Dashboard",
-            "href": "https://platform.verifyyou.com/dashboard"
-        }
-    },
     "contextual": {
         "options": [
             "copy",
