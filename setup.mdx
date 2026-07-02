@@ -43,7 +43,7 @@ Five steps, two tools, about fifteen minutes. Once per study, no code anywhere.
       <li>Paste your password list, one per line, and save. Keep this action alone on page 1.</li>
     </ol>
 
-    This is Alchemer's own [Login/Password action](https://help.alchemer.com/help/login-password-action), and that is Alchemer's own wording: each password deactivates after use. Their server enforces the gate before a single question shows.
+    Alchemer's own [Login/Password action](https://help.alchemer.com/help/login-password-action) enforces the gate before your first question shows.
 
     <p className="vy-have"><strong>You now have:</strong> a survey that refuses anyone without a valid, unused password.</p>
 
@@ -73,20 +73,6 @@ Five steps, two tools, about fifteen minutes. Once per study, no code anywhere.
   </Step>
 </Steps>
 
-## The fifteen-minute proof
-
-No real study needed. Make up a survey, put the gate in front of it, and try to beat it yourself.
-
-<Steps>
-  <Step title="Set it up">Steps 1 through 5 above, on a made-up survey. About fifteen minutes of clicking.</Step>
-  <Step title="Try to beat it">Take the survey through the study link; it just works. Try to take it again, and you can't. Try the raw Alchemer URL with no password, and you get nothing.</Step>
-  <Step title="Check the ledger">Export the CSV and see the verified column against your response IDs. That comparison, run by you and not by us, is worth more than anything we could say.</Step>
-</Steps>
-
-<Note>
-**Where this stands, honestly.** Deep research settled most of it: passwords burn when the login page is submitted (so we re-issue to anyone who abandons, since we recognize their face), and the invisible gate is Alchemer's own documented recipe. One five-minute check remains for any first setup: confirming the URL merge code triggers the auto-login the same way Alchemer's email merge codes do. Worst case, the respondent sees a filled box and taps one button.
-</Note>
-
 ## What happens next
 
 <div className="grid md:grid-cols-2 gap-5 mt-6">
@@ -96,10 +82,10 @@ No real study needed. Make up a survey, put the gate in front of it, and try to 
     <span className="vy-card-title">What your respondent sees</span>
     <span className="vy-card-sub text-gray-500 dark:text-zinc-400">The scan, the pass, the block, and the return, on real product screens.</span>
   </a>
-  <a href="/how-it-works" className="vy-card bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 text-gray-900 dark:text-zinc-50">
-    <span className="vy-card-wm"><Icon icon="lock" iconType="light" size={250} /></span>
-    <span className="vy-card-icon"><Icon icon="lock" iconType="light" size={22} /></span>
-    <span className="vy-card-title">Why it works</span>
-    <span className="vy-card-sub text-gray-500 dark:text-zinc-400">One password, one human, one use, and what lands in your export.</span>
+  <a href="/any-platform" className="vy-card bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 text-gray-900 dark:text-zinc-50">
+    <span className="vy-card-wm"><Icon icon="layer-group" iconType="light" size={250} /></span>
+    <span className="vy-card-icon"><Icon icon="layer-group" iconType="light" size={22} /></span>
+    <span className="vy-card-title">The same mechanism, any platform</span>
+    <span className="vy-card-sub text-gray-500 dark:text-zinc-400">Alchemer today; the pattern fits anywhere.</span>
   </a>
 </div>

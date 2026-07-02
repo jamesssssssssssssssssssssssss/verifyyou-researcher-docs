@@ -218,9 +218,18 @@
 }
 
 /* Liquid-glass circular carousel (home hero): front card center, others recede behind to the right */
-.vy-hero-grid { display: grid; grid-template-columns: 1.7fr 1fr; gap: 2.5rem; align-items: center; max-width: 62rem; margin: 0 auto; }
-.vy-hero-side { min-height: 200px; }
-@media (max-width: 860px) { .vy-hero-grid { grid-template-columns: 1fr; gap: 1.5rem; } .vy-hero-side { min-height: 150px; } }
+.vy-hero-grid { display: grid; grid-template-columns: 1.8fr 1fr; gap: 3rem; align-items: center; }
+.vy-side-card {
+  position: relative; display: grid; grid-template-columns: 1fr auto; align-items: center;
+  gap: 0.75rem 1rem; align-content: center; padding: 1.7rem 1.8rem; border-radius: 16px;
+  min-height: 190px; text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.vy-side-card:hover { border-color: rgba(22, 163, 74, 0.45); transform: translateY(-1px); }
+.vy-side-logo { height: 30px; width: auto; }
+.vy-side-title { grid-column: 1; font: 600 1.08rem/1.45 Inter, sans-serif; }
+.vy-side-arrow { grid-column: 2; grid-row: 1 / span 2; color: #16A34A; display: inline-flex; }
+@media (max-width: 860px) { .vy-hero-grid { grid-template-columns: 1fr; gap: 1.5rem; } .vy-side-card { min-height: 140px; } }
 .vy-car-wrap { max-width: 62rem; margin-left: auto; margin-right: auto; }
 .vy-st-row { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-bottom: 1.25rem; justify-content: center; }
 .vy-st { display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.45rem 0.9rem 0.45rem 0.5rem; border: 1px solid rgba(127, 127, 127, 0.22); border-radius: 999px; background: transparent; font: 600 0.88rem/1.2 Inter, sans-serif; color: #8a8f98; cursor: pointer; transition: border-color 0.15s ease, color 0.15s ease; }
@@ -367,3 +376,7 @@
 .vy-fork-pass .vy-fork-ic { color: #16A34A; display: inline-flex; }
 .vy-fork-fail { border-color: rgba(220, 38, 38, 0.35); }
 .vy-fork-fail .vy-fork-ic { color: rgba(220, 38, 38, 0.8); display: inline-flex; }
+.vy-fork-t2 { margin-top: 0; }
+.vy-fork-lane { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
+.vy-fork-lane .vy-fork-pill { flex: none; }
+.vy-fork-drop { height: 40px; width: 20px; color: rgba(127, 127, 127, 0.55); }

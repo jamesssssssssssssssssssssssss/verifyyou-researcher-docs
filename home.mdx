@@ -17,11 +17,10 @@ mode: "custom"
 
     </div>
 
-    <a href="/how-it-works" className="vy-card vy-hero-side bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 text-gray-900 dark:text-zinc-50">
-      <span className="vy-card-wm"><Icon icon="lock" iconType="light" size={250} /></span>
-      <span className="vy-card-icon"><Icon icon="lock" iconType="light" size={22} /></span>
-      <span className="vy-card-title">See how it works</span>
-      <span className="vy-card-sub text-gray-500 dark:text-zinc-400">One password, one human, one use. The whole mechanism in plain terms.</span>
+    <a href="/how-it-works" className="vy-side-card bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800">
+      <span><img src="/logo/light.svg" alt="VerifyYou" className="vy-side-logo block dark:hidden" /><img src="/logo/dark.svg" alt="VerifyYou" className="vy-side-logo hidden dark:block" /></span>
+      <span className="vy-side-title text-gray-900 dark:text-zinc-50">See how HumanCheck protects surveys</span>
+      <span className="vy-side-arrow"><Icon icon="arrow-right" iconType="light" size={18} /></span>
     </a>
 
   </div>
@@ -103,9 +102,9 @@ mode: "custom"
 
   <p className="vy-kicker">How it works</p>
 
-  <h2 className="mt-2 text-2xl font-semibold text-gray-900 dark:text-zinc-50">One password. One human. One use.</h2>
+  <h2 className="mt-2 text-2xl font-semibold text-gray-900 dark:text-zinc-50">Protect your survey</h2>
 
-  <p className="mt-2 text-gray-500 dark:text-zinc-400 max-w-3xl">VerifyYou grants a one-time password to each verified respondent, so each human can take the study once, and repeat takers and bots get locked out. Alchemer's own <a href="https://help.alchemer.com/help/login-password-action">Login/Password action</a> enforces it before your first question. This is the shape at a glance, not the manual; the full click-by-click lives in <a href="/setup">Researcher setup</a>.</p>
+  <p className="mt-2 text-gray-500 dark:text-zinc-400 max-w-3xl">VerifyYou grants a one-time password to each verified respondent, so each human can take the study once, and repeat takers and bots get locked out. Alchemer's own <a href="https://help.alchemer.com/help/login-password-action">Login/Password action</a> enforces it before your first question.</p>
 
   <div className="mt-6">
 
@@ -141,8 +140,8 @@ mode: "custom"
           <div className="vy-jtitle text-gray-900 dark:text-zinc-50">Field it</div>
           <div className="vy-jgrid">
             <a className="vy-jbox text-gray-900 dark:text-zinc-50" href="/setup#share-your-study-link"><span className="vy-jbox-ico"><Icon icon="share-nodes" iconType="light" size={15} /></span>Share your study link</a>
-            <a className="vy-jbox text-gray-900 dark:text-zinc-50" href="/how-it-works#the-verified-column"><span className="vy-jbox-ico"><Icon icon="table-columns" iconType="light" size={15} /></span>Get the verified column</a>
-            <a className="vy-jbox text-gray-900 dark:text-zinc-50" href="/setup#the-fifteen-minute-proof"><span className="vy-jbox-ico"><Icon icon="flask" iconType="light" size={15} /></span>Try to beat it</a>
+            <a className="vy-jbox text-gray-900 dark:text-zinc-50" href="/respondent-flow"><span className="vy-jbox-ico"><Icon icon="mobile-screen" iconType="light" size={15} /></span>See what respondents see</a>
+            <a className="vy-jbox text-gray-900 dark:text-zinc-50" href="/any-platform"><span className="vy-jbox-ico"><Icon icon="layer-group" iconType="light" size={15} /></span>Bring it to any platform</a>
           </div>
         </div>
       </div>
@@ -155,11 +154,15 @@ mode: "custom"
 
 <div className="max-w-7xl mx-auto px-6 mt-20 mb-24">
 
-  <p className="vy-kicker">Common questions</p>
+  <div className="text-center">
 
-  <h2 className="mt-2 text-2xl font-semibold text-gray-900 dark:text-zinc-50">The questions researchers ask first</h2>
+    <p className="vy-kicker">Common questions</p>
 
-  <div className="mt-6 max-w-3xl">
+    <h2 className="mt-2 text-2xl font-semibold text-gray-900 dark:text-zinc-50">The questions researchers ask first</h2>
+
+  </div>
+
+  <div className="mt-6 max-w-3xl mx-auto">
 
 <AccordionGroup>
   <Accordion title="Will it hurt my completion rate?">
@@ -181,7 +184,7 @@ mode: "custom"
     No, and it is not trying to. It proves the person is real and unique, not that they answered carefully. Keep your speeder and attention checks; this closes the door they cannot close.
   </Accordion>
   <Accordion title="When exactly does a password count as used?">
-    The evidence says it burns the moment the login page is submitted, not at survey completion: Alchemer's own docs show a same password cannot resume a response unless a separate resume feature is enabled, which only makes sense if the password is spent on first use. Practical upshot: a respondent who abandons mid-survey gets a fresh password from us, since we recognize their face. We confirm this in the builder as part of any first setup. See [what we verified](/how-it-works#what-we-verified-and-the-five-minute-confirmation).
+    A password is spent the moment it opens your survey's gate, not at completion. If someone starts your survey and abandons it, that password is gone, and because the check recognizes their face, they simply receive a fresh one on their next visit. Honest respondents are never locked out of a study they never finished.
   </Accordion>
 </AccordionGroup>
 

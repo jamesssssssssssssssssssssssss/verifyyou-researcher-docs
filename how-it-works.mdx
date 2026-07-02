@@ -1,6 +1,6 @@
 ---
 title: "How it works"
-description: "One password, one human, one use. What makes the gate hold, and what lands in your export."
+description: "One password, one human, one use. What makes the gate hold."
 icon: "lock"
 ---
 
@@ -16,21 +16,6 @@ So every cheap trick fails: a shared link carries a spent password, a guessed pa
 
 One honest limit: the check proves who they are, not how carefully they answer. Keep your speeder and attention checks.
 
-## The verified column
-
-Every response in your export carries the check, and you can compare groups the way your stats work already runs.
-
-<div className="grid md:grid-cols-2 gap-5 mt-6">
-  <div>
-    <img src="/images/alchemer-urlvar-exports.png" alt="Alchemer export with URL variables" />
-    <p className="mt-3 text-sm text-gray-500 dark:text-zinc-400">Your normal Alchemer CSV export with <b className="text-gray-900 dark:text-zinc-50">"Include URL Variables"</b> checked. Each row carries the verification alongside the response ID you already use.</p>
-  </div>
-  <div>
-    <img src="/images/vy-real-activity-log.png" alt="VerifyYou activity log" />
-    <p className="mt-3 text-sm text-gray-500 dark:text-zinc-400">Our side of the ledger: who verified, when, and the trust level. Join it to your export and you have a <b className="text-gray-900 dark:text-zinc-50">verified / not verified</b> column on every response.</p>
-  </div>
-</div>
-
 ## What it costs
 
 About one to two cents a verification, charged once per human, so returning respondents never count again. On a \$10,000 sample of \$3 to \$7 completes, the whole check is a rounding error. Compare that to what a single bad complete costs you: the incentive, the sample fee, and the analyst time spent wondering whether to trust the row.
@@ -39,14 +24,6 @@ About one to two cents a verification, charged once per human, so returning resp
 
 No photo is shared with you or with Alchemer, only a yes or no. Your study receives a verdict and a password, never a face, a name, or personal information.
 
-## What we verified, and the five-minute confirmation
-
-We dug through Alchemer's current docs, the SurveyGizmo-era archives, and community threads so you do not have to.
-
-- **When a password burns: at login submit, not at completion.** Alchemer's docs show a password cannot resume a response unless a separate resume feature is on, which means plain single-use passwords are spent on first use. So an abandoner has burned their password, and our gate simply re-issues to the same face.
-- **The invisible gate is Alchemer's own recipe.** Their documented [auto-login flow](https://help.alchemer.com/help/include-login-action-credentials-in-an-email-campaign-message) combines a pre-populated password with page 1's Automatically Submit Page toggle, so a verified respondent never sees the login page at all.
-- **The five-minute confirmation** left for any first setup: that the URL merge code triggers auto-login exactly like the email merge codes in Alchemer's walkthrough, and what an invalid password shows when there is no respondent present to retry.
-
 ## Start here
 
 <div className="grid md:grid-cols-2 gap-5 mt-6">
@@ -54,7 +31,7 @@ We dug through Alchemer's current docs, the SurveyGizmo-era archives, and commun
     <span className="vy-card-wm"><Icon icon="sliders" iconType="light" size={250} /></span>
     <span className="vy-card-icon"><Icon icon="sliders" iconType="light" size={22} /></span>
     <span className="vy-card-title">Set it up</span>
-    <span className="vy-card-sub text-gray-500 dark:text-zinc-400">Four steps, fifteen minutes, no code.</span>
+    <span className="vy-card-sub text-gray-500 dark:text-zinc-400">Five steps, about fifteen minutes, no code.</span>
   </a>
   <a href="/respondent-flow" className="vy-card bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 text-gray-900 dark:text-zinc-50">
     <span className="vy-card-wm"><Icon icon="mobile-screen" iconType="light" size={250} /></span>
