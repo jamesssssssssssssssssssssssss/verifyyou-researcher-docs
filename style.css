@@ -188,13 +188,10 @@
 /* Larger journey rows for the home walkthrough */
 .vy-jbox-lg { font-size: 1.02rem; padding: 0.95rem 1.1rem; font-weight: 600; }
 
-/* Number chip inside walkthrough card titles */
-.vy-card-title .vy-num { margin-right: 0.55rem; vertical-align: 2px; background: rgba(22, 163, 74, 0.08); border-color: rgba(22, 163, 74, 0.4); }
-
 /* Hero 1-2-3-4 list */
 .vy-hero-list { display: flex; flex-direction: column; gap: 0.7rem; max-width: 34rem; }
 .vy-hl-row { display: flex; align-items: center; gap: 0.7rem; font-size: 1rem; font-weight: 500; }
-.vy-hl-row .vy-num { background: rgba(22, 163, 74, 0.08); border-color: rgba(22, 163, 74, 0.4); flex: none; }
+.vy-hl-row .vy-num { flex: none; }
 
 /* Top-of-page next chip */
 .vy-next { display: inline-flex; align-items: center; gap: 0.6rem; margin: 0.2rem 0 0.4rem; padding: 0.45rem 0.85rem; border: 1px solid rgba(127, 127, 127, 0.25); border-radius: 999px; text-decoration: none; font-size: 0.85rem; transition: border-color 0.15s ease; }
@@ -202,3 +199,20 @@
 .vy-next-step { color: #8a8f98; font-weight: 600; text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.06em; }
 .vy-next-label { font-weight: 600; }
 .vy-next-arrow { display: inline-flex; color: #16A34A; }
+
+/* Liquid-glass number chips: translucent, blurred, hairline border, soft top highlight */
+.vy-card-title .vy-num { margin-right: 0.55rem; vertical-align: 2px; }
+.vy-hl-row .vy-num, .vy-card-title .vy-num {
+  color: rgba(75, 85, 99, 0.9);
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  backdrop-filter: blur(10px) saturate(1.4);
+  -webkit-backdrop-filter: blur(10px) saturate(1.4);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), inset 0 -1px 1px rgba(0, 0, 0, 0.04);
+}
+.dark .vy-hl-row .vy-num, .dark .vy-card-title .vy-num {
+  color: rgba(212, 212, 216, 0.9);
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), inset 0 -1px 1px rgba(0, 0, 0, 0.25);
+}
