@@ -17,8 +17,8 @@
 }
 
 /* Hero */
-.vy-hero { padding-top: 1.2rem; padding-bottom: 1rem; }
-.vy-hero h1 { font-size: 2.7rem; line-height: 1.05; font-weight: 600; letter-spacing: -0.01em; }
+.vy-hero { padding-top: 1.8rem; padding-bottom: 1rem; }
+.vy-hero h1 { font-size: 3rem; line-height: 1.05; font-weight: 600; letter-spacing: -0.01em; }
 @media (max-width: 1024px) { .vy-hero h1 { font-size: 2.25rem; } }
 
 /* Buttons */
@@ -223,12 +223,12 @@
 .vy-side-arrow { display: inline-flex; margin-bottom: 0.6rem; color: inherit; }
 @media (max-width: 860px) { .vy-hero-grid { grid-template-columns: 1fr; gap: 1.5rem; } .vy-side-card { min-height: 140px; } }
 .vy-car-wrap { max-width: 62rem; margin-left: auto; margin-right: auto; }
-.vy-st-row { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-bottom: 0.9rem; justify-content: center; }
+.vy-st-row { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-bottom: 1.1rem; justify-content: center; }
 .vy-st { display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.45rem 0.9rem 0.45rem 0.5rem; border: 1px solid rgba(127, 127, 127, 0.22); border-radius: 999px; background: transparent; font: 600 0.88rem/1.2 Inter, sans-serif; color: #8a8f98; cursor: pointer; transition: border-color 0.15s ease, color 0.15s ease; }
 .vy-st:hover { border-color: rgba(22, 163, 74, 0.45); }
 .vy-st.vy-on { color: inherit; border-color: rgba(22, 163, 74, 0.55); }
 
-.vy-car { position: relative; height: 350px; isolation: isolate; }
+.vy-car { position: relative; height: 340px; isolation: isolate; }
 .vy-car-glow {
   position: absolute; inset: 6% 10%; z-index: 0; pointer-events: none;
   background: radial-gradient(closest-side, rgba(52, 168, 83, 0.22), rgba(52, 168, 83, 0.08) 55%, transparent 78%);
@@ -266,7 +266,7 @@
 .vy-car-slide[data-pos="0"] { transform: translateX(0) scale(1); opacity: 1; z-index: 40; filter: none; }
 .vy-car-slide[data-pos="1"] { transform: translateX(54px) scale(0.94); opacity: 0.6; z-index: 25; filter: blur(2px) saturate(0.85); pointer-events: none; }
 .vy-car-slide[data-pos="2"] { transform: translateX(-54px) scale(0.94); opacity: 0.6; z-index: 25; filter: blur(2px) saturate(0.85); pointer-events: none; }
-.vy-car-nav { display: flex; justify-content: center; gap: 0.9rem; margin-top: 0.7rem; }
+.vy-car-nav { display: flex; justify-content: center; align-items: center; gap: 1.1rem; margin-top: 1rem; }
 .vy-car-arrow {
   width: 50px; height: 50px; border-radius: 999px; cursor: pointer;
   display: grid; place-items: center; color: rgba(55, 65, 81, 0.95);
@@ -442,3 +442,7 @@
 .vy-viz-hi { color: #16A34A; background: rgba(22, 163, 74, 0.10); border: 1px solid rgba(22, 163, 74, 0.4); }
 .vy-viz-mid { color: #B45309; background: rgba(217, 119, 6, 0.10); border: 1px solid rgba(217, 119, 6, 0.4); }
 .vy-viz-no { color: rgba(220, 38, 38, 0.85); background: rgba(220, 38, 38, 0.08); border: 1px solid rgba(220, 38, 38, 0.35); }
+
+/* Autoplay progress: fills left to right, then the deck advances */
+.vy-car-prog { width: 130px; height: 3px; border-radius: 999px; background: rgba(127, 127, 127, 0.25); overflow: hidden; }
+.vy-car-prog span { display: block; height: 100%; width: 0; border-radius: 999px; background: #16A34A; transition: width 80ms linear; }
