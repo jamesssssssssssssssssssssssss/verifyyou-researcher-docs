@@ -444,6 +444,13 @@
 .vy-viz-no { color: rgba(220, 38, 38, 0.85); background: rgba(220, 38, 38, 0.08); border: 1px solid rgba(220, 38, 38, 0.35); }
 
 /* Autoplay progress: a small glass track living on the front card's bottom edge */
+/* Narrow-column carousel (How-it-works content column): single-column slides, tighter recede */
+.vy-car-narrow .vy-car { height: 470px; }
+.vy-car-narrow .vy-car-slide { inset: 0 34px; grid-template-columns: 1fr; gap: 1.1rem; align-content: center; padding: 1.9rem 1.7rem 1.5rem; }
+.vy-car-narrow .vy-car-slide[data-pos="1"] { transform: translateX(26px) scale(0.94); }
+.vy-car-narrow .vy-car-slide[data-pos="2"] { transform: translateX(-26px) scale(0.94); }
+.vy-car-narrow .vy-sp-text { font-size: 1rem; }
+
 .vy-car-prog {
   position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%);
   width: 88px; height: 3px; border-radius: 999px; overflow: hidden; z-index: 45; pointer-events: none;
@@ -563,14 +570,18 @@
 .vy-onepager .vy-o-ben-d { font-size: 0.83rem; line-height: 1.55; margin-top: 0.35rem; }
 @media (max-width: 860px) { .vy-onepager .vy-o-bens { grid-template-columns: 1fr; gap: 1.1rem; } }
 
-/* Unified one-pager sheet: How-it-works (blocks left, phone fork right), setup grid, band */
-.vy-onepager .vy-o-hiw { display: grid; grid-template-columns: 1.25fr 1fr; gap: 2.2rem; align-items: center; }
-.vy-onepager .vy-o-hb { display: flex; gap: 0.8rem; align-items: flex-start; }
-.vy-onepager .vy-o-hb + .vy-o-hb { margin-top: 1.35rem; }
-.vy-onepager .vy-o-hb .vy-num { flex: none; margin-top: 0.1rem; }
-.vy-onepager .vy-o-hb-t { font-weight: 650; font-size: 0.98rem; }
-.vy-onepager .vy-o-hb-d { font-size: 0.85rem; line-height: 1.55; margin-top: 0.3rem; }
-.vy-onepager .vy-o-hiw-right { display: flex; flex-direction: column; align-items: center; }
+/* Unified one-pager sheet: How-it-works (blocks left, phone fork right), setup grid, band.
+   Columns stretch to equal height with a hairline divider between them; the right flow
+   distributes with space-between so it always matches the left column's height. */
+.vy-onepager .vy-o-hiw { display: grid; grid-template-columns: 1.25fr 1fr; gap: 0; align-items: stretch; }
+.vy-onepager .vy-o-hiw-left { padding-right: 2.1rem; }
+.vy-onepager .vy-o-hb { display: flex; gap: 0.7rem; align-items: flex-start; }
+.vy-onepager .vy-o-hb + .vy-o-hb { margin-top: 1.05rem; }
+.vy-onepager .vy-o-hb .vy-num { flex: none; margin-top: 0.05rem; width: 1.35rem; height: 1.35rem; font-size: 0.72rem; }
+.vy-onepager .vy-o-hb-t { font-weight: 650; font-size: 0.92rem; }
+.vy-onepager .vy-o-hb-d { font-size: 0.79rem; line-height: 1.5; margin-top: 0.25rem; }
+.vy-onepager .vy-o-hiw-right { display: flex; flex-direction: column; align-items: center; justify-content: space-between; border-left: 1px solid rgba(127, 127, 127, 0.16); padding-left: 2.1rem; }
+.vy-onepager .vy-o-forkblock { width: 100%; display: flex; flex-direction: column; align-items: center; }
 .vy-onepager .vy-o-tree { margin-top: 0.7rem; display: flex; flex-direction: column; gap: 0.4rem; }
 .vy-onepager .vy-o-trow { display: flex; align-items: center; gap: 0.15rem; }
 .vy-onepager .vy-o-br { width: 22px; height: 19px; flex: none; color: rgba(127, 127, 127, 0.5); }
@@ -583,6 +594,8 @@
 .vy-onepager .vy-o-band-row { display: flex; align-items: center; justify-content: space-between; margin-top: 0.75rem; }
 @media (max-width: 860px) {
   .vy-onepager .vy-o-hiw { grid-template-columns: 1fr; gap: 1.4rem; }
+  .vy-onepager .vy-o-hiw-left { padding-right: 0; }
+  .vy-onepager .vy-o-hiw-right { border-left: 0; padding-left: 0; border-top: 1px solid rgba(127, 127, 127, 0.16); padding-top: 1.4rem; gap: 0.3rem; justify-content: flex-start; }
   .vy-onepager .vy-o-setgrid { grid-template-columns: 1fr; gap: 1rem; }
   .vy-onepager .vy-o-band-row { flex-wrap: wrap; gap: 0.7rem 1.1rem; justify-content: flex-start; }
 }
@@ -606,7 +619,11 @@
 }
 .vy-onepager .vy-o-mini-t { font: 650 0.85rem/1.25 Inter, sans-serif; }
 .vy-onepager .vy-o-mini-phone { flex-direction: column; gap: 0.55rem; padding: 0.9rem 1rem 0.8rem; }
-.vy-onepager .vy-o-mini-phone .vy-o-phone { height: 168px; }
+.vy-onepager .vy-o-mini-phone .vy-o-phone { height: 185px; }
+
+/* Simple in-sheet download link, under the header sub */
+.vy-onepager .vy-o-dl { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 0.85rem; font: 600 0.82rem/1 Inter, sans-serif; color: #16A34A; text-decoration: none; }
+.vy-onepager .vy-o-dl:hover { text-decoration: underline; }
 .vy-onepager .vy-o-mini-fork { flex-direction: column; gap: 0.5rem; }
 .vy-onepager .vy-o-mini-fork .vy-fork-pill { font-size: 0.78rem; padding: 0.42rem 0.75rem; }
 .vy-onepager .vy-o-down { width: 13px; height: 20px; color: rgba(127, 127, 127, 0.5); margin: 0.1rem 0; }
@@ -618,16 +635,16 @@
 @media (prefers-reduced-motion: reduce) { .vy-onepager .vy-o-band .vy-o-marq-track { animation: none; } }
 
 /* Minimal versions of the carousel glass graphics, one under each numbered block */
-.vy-onepager .vy-o-vmin { justify-self: start; max-width: 330px; margin-top: 0.75rem; padding: 0.7rem 0.8rem; gap: 0.45rem; border-radius: 13px; }
-.vy-onepager .vy-o-vmin .vy-viz-field { padding: 0.5rem 0.7rem; }
-.vy-onepager .vy-o-vmin .vy-viz-code { font-size: 0.8rem; }
-.vy-onepager .vy-o-vmin .vy-viz-ico { width: 26px; height: 26px; }
-.vy-onepager .vy-o-vmin .vy-viz-arrow { min-width: 26px; height: 13px; }
-.vy-onepager .vy-o-vmin .vy-viz-out { font-size: 0.68rem; padding: 0.26rem 0.55rem; }
-.vy-onepager .vy-o-vmin .vy-viz-row { padding: 0.42rem 0.65rem; }
-.vy-onepager .vy-o-vmin .vy-viz-id { font-size: 0.74rem; }
-.vy-onepager .vy-o-vmin .vy-viz-tag { font-size: 0.68rem; }
-.vy-onepager .vy-o-vmin .vy-viz-pill { font-size: 0.68rem; }
+.vy-onepager .vy-o-vmin { justify-self: start; max-width: 310px; margin-top: 0.6rem; padding: 0.55rem 0.65rem; gap: 0.38rem; border-radius: 12px; }
+.vy-onepager .vy-o-vmin .vy-viz-field { padding: 0.4rem 0.6rem; }
+.vy-onepager .vy-o-vmin .vy-viz-code { font-size: 0.76rem; }
+.vy-onepager .vy-o-vmin .vy-viz-ico { width: 22px; height: 22px; }
+.vy-onepager .vy-o-vmin .vy-viz-arrow { min-width: 24px; height: 12px; }
+.vy-onepager .vy-o-vmin .vy-viz-out { font-size: 0.64rem; padding: 0.22rem 0.5rem; }
+.vy-onepager .vy-o-vmin .vy-viz-row { padding: 0.34rem 0.55rem; }
+.vy-onepager .vy-o-vmin .vy-viz-id { font-size: 0.7rem; }
+.vy-onepager .vy-o-vmin .vy-viz-tag { font-size: 0.64rem; }
+.vy-onepager .vy-o-vmin .vy-viz-pill { font-size: 0.64rem; padding: 0.1rem 0.45rem; }
 
 /* The real fork: one stem out of the scan card, two curved branches to pass / fail */
 .vy-onepager .vy-o-forksvg { display: block; width: 100%; max-width: 340px; height: auto; color: rgba(127, 127, 127, 0.5); margin: 0.05rem 0 0.15rem; }
