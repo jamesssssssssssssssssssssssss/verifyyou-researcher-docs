@@ -231,11 +231,11 @@
 .vy-car { position: relative; height: 340px; isolation: isolate; }
 .vy-car-glow {
   position: absolute; inset: 6% 10%; z-index: 0; pointer-events: none;
-  background: radial-gradient(closest-side, rgba(52, 168, 83, 0.22), rgba(52, 168, 83, 0.08) 55%, transparent 78%);
+  background: radial-gradient(closest-side, rgba(52, 168, 83, 0.10), rgba(52, 168, 83, 0.04) 55%, transparent 78%);
   filter: blur(34px);
 }
 .dark .vy-car-glow {
-  background: radial-gradient(closest-side, rgba(52, 168, 83, 0.30), rgba(52, 168, 83, 0.10) 55%, transparent 78%);
+  background: radial-gradient(closest-side, rgba(52, 168, 83, 0.12), rgba(52, 168, 83, 0.05) 55%, transparent 78%);
 }
 .vy-car-slide {
   position: absolute; inset: 0 72px;
@@ -534,9 +534,9 @@
   border: 1px solid rgba(127, 127, 127, 0.25); border-radius: 999px; padding: 0.35rem 0.7rem;
   background: rgba(127, 127, 127, 0.06);
 }
-.vy-onepager .vy-o-marq { display: flex; align-items: center; gap: 1.1rem; margin-top: 1.3rem; padding-top: 1.2rem; border-top: 1px solid rgba(127, 127, 127, 0.16); }
-.vy-onepager .vy-o-marq-label { flex: none; font: 650 0.66rem/1.3 Inter, sans-serif; letter-spacing: 0.12em; text-transform: uppercase; color: #8a8f98; max-width: 5.5rem; }
-.vy-onepager .vy-o-marq-clip { overflow: hidden; flex: 1 1 auto; min-width: 0; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.vy-onepager .vy-o-marq { display: flex; flex-direction: column; align-items: flex-start; gap: 0.75rem; margin-top: 1.3rem; padding-top: 1.2rem; border-top: 1px solid rgba(127, 127, 127, 0.16); }
+.vy-onepager .vy-o-marq-label { font: 650 0.66rem/1.3 Inter, sans-serif; letter-spacing: 0.12em; text-transform: uppercase; color: #8a8f98; }
+.vy-onepager .vy-o-marq-clip { overflow: hidden; width: 100%; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
 .vy-onepager .vy-o-marq-track { display: flex; align-items: center; gap: 2.4rem; width: max-content; animation: vy-o-scroll 36s linear infinite; }
 .vy-onepager .vy-o-lg { display: inline-flex; align-items: center; gap: 0.6rem; font: 600 0.88rem/1 Inter, sans-serif; color: #8a8f98; white-space: nowrap; }
 .vy-onepager .vy-o-lg svg { height: 19px; width: auto; display: block; opacity: 0.75; }
@@ -548,3 +548,7 @@
   .vy-onepager .vy-o-setup .vy-op-arrow { transform: rotate(90deg); height: 22px; width: 22px; min-width: 0; margin: 0 auto; }
   .vy-onepager .vy-o-setwide { max-width: none; }
 }
+
+.vy-onepager .vy-o-passlane { display: flex; align-items: center; gap: 0.45rem; }
+.vy-onepager .vy-o-minarrow { width: 22px; height: 13px; flex: none; color: rgba(127, 127, 127, 0.55); }
+@media (max-width: 860px) { .vy-onepager .vy-o-passlane { flex-wrap: wrap; } }

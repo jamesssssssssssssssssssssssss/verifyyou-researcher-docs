@@ -42,15 +42,23 @@ icon: "sliders"
     Open your study's **Survey Flow**.
 
     <ol className="vy-sub">
-      <li>Add an **Embedded Data** element at the very top, with the single field name `vy_code` and no value. It captures the code that arrives on each verified respondent's link.</li>
+      <li>Add an **Embedded Data** element at the very top, with the single field name `vy_code` and no value. Qualtrics then fills it from each respondent's link, their documented [query-string mechanism](https://www.qualtrics.com/support/survey-platform/survey-module/survey-flow/standard-elements/passing-information-through-query-strings/): the field should read "Value will be set from Panel or URL."</li>
       <li>Add an **Authenticator** element beneath it. Authenticate against your imported contact list on **External Data Reference**, tick **Prefill**, and point it at `vy_code`. Leave **"Allow authenticating respondents to retake authenticated section"** unchecked, which is the default: that is what makes each code one-time.</li>
       <li>Drag your survey blocks inside the Authenticator.</li>
       <li>After the Authenticator, add a **Branch** for anyone who falls through without authenticating, ending in its own **End of Survey** element marked as screened out. Qualtrics records a failed authentication as a complete by default, so this branch is what keeps failed and duplicate visitors out of your data.</li>
     </ol>
 
-    Qualtrics's own [Authenticator](https://www.qualtrics.com/support/survey-platform/survey-module/survey-flow/advanced-elements/authenticator/) enforces the gate, and a prefilled pass is invisible: a verified respondent never even sees a login screen.
+    Qualtrics's own [Authenticator](https://www.qualtrics.com/support/survey-platform/survey-module/survey-flow/advanced-elements/authenticator/) enforces the gate, and in their own words the Prefill option means a respondent with the right credentials "never even sees the authenticator."
 
     <p className="vy-have"><strong>You now have:</strong> a gate that opens itself for verified respondents and routes everyone else to a screen-out.</p>
+
+    <Frame caption="Qualtrics's own UI: Survey Flow, with an Embedded Data element at the top. 'Value will be set from Panel or URL' is exactly what your code field should say.">
+      <img src="/images/qualtrics-add-authenticator.png" alt="Qualtrics Survey Flow with Embedded Data element" />
+    </Frame>
+
+    <Frame caption="Qualtrics's own UI: the Authenticator set to External Data Reference with Prefill ticked. 'This will attempt to automatically authenticate the recipient' is Qualtrics's own wording.">
+      <img src="/images/qualtrics-prefill.png" alt="Qualtrics Authenticator with Prefill enabled" />
+    </Frame>
   </Step>
   <Step title="Share your study link">
     Paste the study link from step 2 into your panel, your sample provider, or your invite email.
