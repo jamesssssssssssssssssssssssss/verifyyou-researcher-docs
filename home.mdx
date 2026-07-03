@@ -31,7 +31,7 @@ mode: "custom"
      IRB pills, built-by-humans marquee). */}
   <div className="vy-onepager">
     <div className="vy-o-bar">
-      <a className="vy-btn vy-btn-secondary text-gray-900 dark:text-zinc-50" href="/images/humancheck-one-pager-r3.png" download="humancheck-one-pager.png"><Icon icon="arrow-down-to-line" iconType="light" size={14} />Download the one-pager</a>
+      <a className="vy-btn vy-btn-secondary text-gray-900 dark:text-zinc-50" href="/images/humancheck-one-pager-r4.png" download="humancheck-one-pager.png"><Icon icon="arrow-down-to-line" iconType="light" size={14} />Download the one-pager</a>
     </div>
     <div className="vy-op-wrap">
       <div className="vy-op-sheet vy-o-page">
@@ -45,6 +45,9 @@ mode: "custom"
               <div>
                 <p className="vy-o-hb-t text-gray-900 dark:text-zinc-50">A passcode per human</p>
                 <p className="vy-o-hb-d text-gray-500 dark:text-zinc-400">Each verified respondent receives a one-time passcode, created for their face alone and dropped onto their link. It fills itself in at your study's gate.</p>
+                <div className="vy-viz vy-o-vmin">
+                  <div className="vy-viz-field"><span className="vy-viz-code">vyp_k2•••••••4qt</span><span className="vy-viz-check"><Icon icon="circle-check" iconType="light" size={14} /></span></div>
+                </div>
               </div>
             </div>
             <div className="vy-o-hb">
@@ -52,6 +55,23 @@ mode: "custom"
               <div>
                 <p className="vy-o-hb-t text-gray-900 dark:text-zinc-50">Fakes locked out</p>
                 <p className="vy-o-hb-d text-gray-500 dark:text-zinc-400">Bots and returning humans get locked out. A duplicate face never earns a second passcode, and a spent passcode is dead forever.</p>
+                <div className="vy-viz vy-o-vmin">
+                  <div className="vy-viz-lane">
+                    <span className="vy-viz-ico"><Icon icon="user" iconType="light" size={13} /></span>
+                    <svg className="vy-viz-arrow" viewBox="0 0 64 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 8 h52" stroke="currentColor" strokeWidth="1.5" /><path d="M48 3 L56 8 L48 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                    <span className="vy-viz-out vy-viz-pass"><span className="vy-viz-outico"><Icon icon="check" iconType="light" size={11} /></span>Into the study</span>
+                  </div>
+                  <div className="vy-viz-lane">
+                    <span className="vy-viz-ico"><Icon icon="robot" iconType="light" size={13} /></span>
+                    <svg className="vy-viz-arrow" viewBox="0 0 64 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 8 h38" stroke="currentColor" strokeWidth="1.5" /><path d="M46 2 v12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>
+                    <span className="vy-viz-out vy-viz-fail"><span className="vy-viz-outico"><Icon icon="xmark" iconType="light" size={11} /></span>Blocked</span>
+                  </div>
+                  <div className="vy-viz-lane">
+                    <span className="vy-viz-ico"><Icon icon="user-group" iconType="light" size={13} /></span>
+                    <svg className="vy-viz-arrow" viewBox="0 0 64 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 8 h38" stroke="currentColor" strokeWidth="1.5" /><path d="M46 2 v12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>
+                    <span className="vy-viz-out vy-viz-fail"><span className="vy-viz-outico"><Icon icon="xmark" iconType="light" size={11} /></span>Same face, second try</span>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="vy-o-hb">
@@ -59,6 +79,10 @@ mode: "custom"
               <div>
                 <p className="vy-o-hb-t text-gray-900 dark:text-zinc-50">Pay only for real</p>
                 <p className="vy-o-hb-d text-gray-500 dark:text-zinc-400">You only pay for real, first-time respondents. Blocked traffic never enters your data and never gets paid.</p>
+                <div className="vy-viz vy-o-vmin">
+                  <div className="vy-viz-row"><span className="vy-viz-id">rsp_78421</span><span className="vy-viz-tag">Verified</span><span className="vy-viz-pill vy-viz-hi">92%</span></div>
+                  <div className="vy-viz-row"><span className="vy-viz-id">rsp_78422</span><span className="vy-viz-tag">Blocked</span><span className="vy-viz-pill vy-viz-no"><Icon icon="xmark" iconType="light" size={10} /></span></div>
+                </div>
               </div>
             </div>
           </div>
@@ -72,10 +96,15 @@ mode: "custom"
               <img className="vy-phone vy-o-phone" src="/images/screen-scan2.png" alt="The live face check, real product" />
               <span className="vy-o-mini-t text-gray-900 dark:text-zinc-50">Five-second face check</span>
             </div>
-            <svg className="vy-o-down" viewBox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 1 v16" stroke="currentColor" strokeWidth="1.5" /><path d="M2 13 L7 19 L12 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
-            <div className="vy-o-mini vy-o-mini-fork">
+            <svg className="vy-o-forksvg" viewBox="0 0 400 66" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M200 2 v12 C200 44 100 34 100 58" stroke="currentColor" strokeWidth="1.5" />
+              <path d="M200 2 v12 C200 44 300 34 300 58" stroke="currentColor" strokeWidth="1.5" />
+              <path d="M95 53 L100 62 L105 53" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M295 53 L300 62 L305 53" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            <div className="vy-o-forkrow">
               <span className="vy-fork-pill vy-fork-pass"><span className="vy-fork-ic"><Icon icon="circle-check" iconType="light" size={14} /></span>Into your study</span>
-              <span className="vy-fork-pill vy-fork-fail"><span className="vy-fork-ic"><Icon icon="circle-xmark" iconType="light" size={14} /></span>Bot or returning human: blocked</span>
+              <span className="vy-fork-pill vy-fork-fail"><span className="vy-fork-ic"><Icon icon="circle-xmark" iconType="light" size={14} /></span>Blocked</span>
             </div>
           </div>
         </div>
@@ -83,7 +112,7 @@ mode: "custom"
         <div className="vy-o-setgrid">
           <div className="vy-o-set">
             <span className="vy-fork-pill vy-op-node"><span className="vy-o-setnum vy-num">1</span>Create your study</span>
-            <p className="vy-o-set-d text-gray-500 dark:text-zinc-400">In Alchemer or Qualtrics, exactly as you normally would.</p>
+            <p className="vy-o-set-d text-gray-500 dark:text-zinc-400">In any survey platform, exactly as you normally would.</p>
           </div>
           <div className="vy-o-set">
             <span className="vy-fork-pill vy-op-node"><span className="vy-o-setnum vy-num">2</span>Add it to a verification</span>

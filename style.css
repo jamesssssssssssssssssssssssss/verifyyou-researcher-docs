@@ -202,7 +202,7 @@
 
 /* Liquid-glass number chips: translucent, blurred, hairline border, soft top highlight */
 .vy-card-title .vy-num { margin-right: 0.55rem; vertical-align: 2px; }
-.vy-hl-row .vy-num, .vy-card-title .vy-num, .vy-st .vy-num, .vy-car-slide .vy-num {
+.vy-hl-row .vy-num, .vy-card-title .vy-num, .vy-st .vy-num, .vy-car-slide .vy-num, .vy-onepager .vy-num {
   color: rgba(75, 85, 99, 0.9);
   background: rgba(0, 0, 0, 0.04);
   border: 1px solid rgba(0, 0, 0, 0.10);
@@ -210,7 +210,7 @@
   -webkit-backdrop-filter: blur(10px) saturate(1.4);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), inset 0 -1px 1px rgba(0, 0, 0, 0.04);
 }
-.dark .vy-hl-row .vy-num, .dark .vy-card-title .vy-num, .dark .vy-st .vy-num, .dark .vy-car-slide .vy-num {
+.dark .vy-hl-row .vy-num, .dark .vy-card-title .vy-num, .dark .vy-st .vy-num, .dark .vy-car-slide .vy-num, .dark .vy-onepager .vy-num {
   color: rgba(212, 212, 216, 0.9);
   background: rgba(255, 255, 255, 0.07);
   border-color: rgba(255, 255, 255, 0.14);
@@ -578,7 +578,7 @@
 .vy-onepager .vy-o-setgrid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.3rem; }
 .vy-onepager .vy-o-set .vy-fork-pill { font-size: 0.82rem; }
 .vy-onepager .vy-o-set-d { font-size: 0.8rem; line-height: 1.5; margin-top: 0.55rem; padding: 0 0.25rem; }
-.vy-onepager .vy-o-band { margin-top: 1.5rem; padding: 1rem 1.3rem 1.05rem; border: 1px solid rgba(127, 127, 127, 0.20); border-radius: 14px; background: rgba(127, 127, 127, 0.05); }
+.vy-onepager .vy-o-band { margin: 1.6rem -2.1rem 0; padding: 1.15rem 0 0; border-top: 1px solid rgba(127, 127, 127, 0.16); }
 .vy-onepager .vy-o-band-label { text-align: center; font: 650 0.64rem/1 Inter, sans-serif; letter-spacing: 0.15em; text-transform: uppercase; color: #8a8f98; }
 .vy-onepager .vy-o-band-row { display: flex; align-items: center; justify-content: space-between; margin-top: 0.75rem; }
 @media (max-width: 860px) {
@@ -610,9 +610,26 @@
 .vy-onepager .vy-o-mini-fork { flex-direction: column; gap: 0.5rem; }
 .vy-onepager .vy-o-mini-fork .vy-fork-pill { font-size: 0.78rem; padding: 0.42rem 0.75rem; }
 .vy-onepager .vy-o-down { width: 13px; height: 20px; color: rgba(127, 127, 127, 0.5); margin: 0.1rem 0; }
-.vy-onepager .vy-o-band .vy-o-marq-clip { overflow: hidden; width: 100%; margin-top: 0.75rem; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.vy-onepager .vy-o-band .vy-o-marq-clip { overflow: hidden; width: 100%; margin-top: 0.85rem; -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); }
 .vy-onepager .vy-o-band .vy-o-marq-track { display: flex; align-items: center; gap: 2.4rem; width: max-content; animation: vy-o-scroll 36s linear infinite; }
 .vy-onepager .vy-o-lg { display: inline-flex; align-items: center; gap: 0.6rem; font: 600 0.88rem/1 Inter, sans-serif; color: #8a8f98; white-space: nowrap; }
 .vy-onepager .vy-o-lg svg { height: 18px; width: auto; display: block; opacity: 0.8; }
 @keyframes vy-o-scroll { to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { .vy-onepager .vy-o-band .vy-o-marq-track { animation: none; } }
+
+/* Minimal versions of the carousel glass graphics, one under each numbered block */
+.vy-onepager .vy-o-vmin { justify-self: start; max-width: 330px; margin-top: 0.75rem; padding: 0.7rem 0.8rem; gap: 0.45rem; border-radius: 13px; }
+.vy-onepager .vy-o-vmin .vy-viz-field { padding: 0.5rem 0.7rem; }
+.vy-onepager .vy-o-vmin .vy-viz-code { font-size: 0.8rem; }
+.vy-onepager .vy-o-vmin .vy-viz-ico { width: 26px; height: 26px; }
+.vy-onepager .vy-o-vmin .vy-viz-arrow { min-width: 26px; height: 13px; }
+.vy-onepager .vy-o-vmin .vy-viz-out { font-size: 0.68rem; padding: 0.26rem 0.55rem; }
+.vy-onepager .vy-o-vmin .vy-viz-row { padding: 0.42rem 0.65rem; }
+.vy-onepager .vy-o-vmin .vy-viz-id { font-size: 0.74rem; }
+.vy-onepager .vy-o-vmin .vy-viz-tag { font-size: 0.68rem; }
+.vy-onepager .vy-o-vmin .vy-viz-pill { font-size: 0.68rem; }
+
+/* The real fork: one stem out of the scan card, two curved branches to pass / fail */
+.vy-onepager .vy-o-forksvg { display: block; width: 100%; max-width: 340px; height: auto; color: rgba(127, 127, 127, 0.5); margin: 0.05rem 0 0.15rem; }
+.vy-onepager .vy-o-forkrow { display: grid; grid-template-columns: 1fr 1fr; justify-items: center; align-items: start; width: 100%; gap: 0.5rem; }
+.vy-onepager .vy-o-forkrow .vy-fork-pill { flex: none; font-size: 0.76rem; padding: 0.42rem 0.7rem; white-space: nowrap; }
