@@ -45,6 +45,12 @@
                 ]
             },
             {
+                "tab": "Qualtrics setup",
+                "pages": [
+                    "qualtrics-setup"
+                ]
+            },
+            {
                 "tab": "Respondent experience",
                 "pages": [
                     "respondent-flow"

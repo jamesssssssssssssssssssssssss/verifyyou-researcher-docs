@@ -1,10 +1,10 @@
 ---
 title: "The same mechanism, any platform"
-description: "One check, one single-use credential, enforced by whatever gate your platform already has. Alchemer today; the pattern fits anywhere."
+description: "One check, one single-use credential, enforced by whatever gate your platform already has. Alchemer and Qualtrics today; the pattern fits anywhere."
 icon: "layer-group"
 ---
 
-<a className="vy-next" href="/setup"><span className="vy-next-step">5 of 5</span><span className="vy-next-label">Next: Ready? Start the setup</span><span className="vy-next-arrow"><Icon icon="arrow-right" iconType="light" size={14} /></span></a>
+<a className="vy-next" href="/setup"><span className="vy-next-step">6 of 6</span><span className="vy-next-label">Next: Ready? Start the setup</span><span className="vy-next-arrow"><Icon icon="arrow-right" iconType="light" size={14} /></span></a>
 
 Nothing about this is Alchemer-specific except the last step. The mechanism is always the same three moves, and only the credential changes shape to fit the platform's own lock.
 
@@ -19,7 +19,7 @@ Nothing about this is Alchemer-specific except the last step. The mechanism is a
 | Platform | The credential | The platform's own lock |
 | --- | --- | --- |
 | **Alchemer** | A one-time password | The Login/Password action, individual one-time passwords that deactivate after use |
-| **Qualtrics** | A single-use personal link | Invitation Only mode: the link is the key, and it dies on first open |
+| **Qualtrics** | A one-time code on the link | The Authenticator in Survey Flow: each code authenticates exactly once |
 | **Typeform, Jotform, Tally** | A one-time token on the link | A hosted gate page opens the form only for a valid token, and a webhook removes anything that slips through |
 | **Google Forms** | A one-time token in a field | A small script checks each submission and removes the bad ones |
 | **Your own survey stack** | A one-time token | Your code asks us "is this token real and unused?" before saving |

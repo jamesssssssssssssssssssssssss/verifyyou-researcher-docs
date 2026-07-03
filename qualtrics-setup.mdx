@@ -1,0 +1,81 @@
+---
+title: "Qualtrics setup"
+description: "Put HumanCheck in front of your Qualtrics study. Five steps, no code."
+icon: "sliders"
+---
+
+<a className="vy-next" href="/respondent-flow"><span className="vy-next-step">4 of 6</span><span className="vy-next-label">Next: The respondent experience</span><span className="vy-next-arrow"><Icon icon="arrow-right" iconType="light" size={14} /></span></a>
+
+<Steps>
+  <Step title="Create your study">
+    In Qualtrics, exactly as you normally would.
+
+    <ol className="vy-sub">
+      <li>Build your study as usual. Your questions stay exactly where they are.</li>
+      <li>The gate is added in the **Survey Flow**, not on a page, so nothing about your instrument changes.</li>
+    </ol>
+
+    <p className="vy-have"><strong>You now have:</strong> a normal Qualtrics study.</p>
+  </Step>
+  <Step title="Create a verification and paste your Qualtrics link">
+    In the VerifyYou dashboard.
+
+    <ol className="vy-sub">
+      <li>Click **New verification** and name the study.</li>
+      <li>Under **"Where does your survey live?"** pick **Qualtrics**. That choice is how we know to create one-time codes in a contact-list file, the credential Qualtrics's own Authenticator understands.</li>
+      <li>Paste your Qualtrics link and click **Create verification**.</li>
+    </ol>
+
+    <p className="vy-have"><strong>You now have:</strong> your <strong>study link</strong> (the one you share, your Qualtrics link stays private) and a <strong>ready-to-import contact list</strong> holding one one-time code per verified respondent.</p>
+  </Step>
+  <Step title="Import the codes as a contact list">
+    In Qualtrics's **Contacts** (called **XM Directory** on newer accounts).
+
+    <ol className="vy-sub">
+      <li>Click **Create Contact List** and import the VerifyYou file as-is.</li>
+      <li>Each row carries one code in the **External Data Reference** field. That field is the passcode slot.</li>
+    </ol>
+
+    <p className="vy-have"><strong>You now have:</strong> a contact list where each code can authenticate exactly once.</p>
+  </Step>
+  <Step title="Add the gate in Survey Flow">
+    Open your study's **Survey Flow**.
+
+    <ol className="vy-sub">
+      <li>Add an **Embedded Data** element at the very top, with the single field name `vy_code` and no value. It captures the code that arrives on each verified respondent's link.</li>
+      <li>Add an **Authenticator** element beneath it. Authenticate against your imported contact list on **External Data Reference**, tick **Prefill**, and point it at `vy_code`. Leave **"Allow authenticating respondents to retake authenticated section"** unchecked, which is the default: that is what makes each code one-time.</li>
+      <li>Drag your survey blocks inside the Authenticator.</li>
+      <li>After the Authenticator, add a **Branch** for anyone who falls through without authenticating, ending in its own **End of Survey** element marked as screened out. Qualtrics records a failed authentication as a complete by default, so this branch is what keeps failed and duplicate visitors out of your data.</li>
+    </ol>
+
+    Qualtrics's own [Authenticator](https://www.qualtrics.com/support/survey-platform/survey-module/survey-flow/advanced-elements/authenticator/) enforces the gate, and a prefilled pass is invisible: a verified respondent never even sees a login screen.
+
+    <p className="vy-have"><strong>You now have:</strong> a gate that opens itself for verified respondents and routes everyone else to a screen-out.</p>
+  </Step>
+  <Step title="Share your study link">
+    Paste the study link from step 2 into your panel, your sample provider, or your invite email.
+
+    <p className="vy-have"><strong>You now have:</strong> a fielded study where everyone who reaches your questions came through the check. That's the whole setup.</p>
+  </Step>
+</Steps>
+
+<Note>
+**License note.** Free Qualtrics accounts do not include contact lists, so this flow needs a standard or university license, which is what most institutions provide. If the Authenticator element does not appear in your Survey Flow options, your Qualtrics brand administrator can enable it.
+</Note>
+
+## What happens next
+
+<div className="grid md:grid-cols-2 gap-5 mt-6">
+  <a href="/respondent-flow" className="vy-card bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 text-gray-900 dark:text-zinc-50">
+    <span className="vy-card-wm"><Icon icon="mobile-screen" iconType="light" size={250} /></span>
+    <span className="vy-card-icon"><Icon icon="mobile-screen" iconType="light" size={22} /></span>
+    <span className="vy-card-title">What your respondent sees</span>
+    <span className="vy-card-sub text-gray-500 dark:text-zinc-400">The scan, the pass, the block, and the return, on real product screens.</span>
+  </a>
+  <a href="/any-platform" className="vy-card bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 text-gray-900 dark:text-zinc-50">
+    <span className="vy-card-wm"><Icon icon="layer-group" iconType="light" size={250} /></span>
+    <span className="vy-card-icon"><Icon icon="layer-group" iconType="light" size={22} /></span>
+    <span className="vy-card-title">The same mechanism, any platform</span>
+    <span className="vy-card-sub text-gray-500 dark:text-zinc-400">Alchemer and Qualtrics today; the pattern fits anywhere.</span>
+  </a>
+</div>
