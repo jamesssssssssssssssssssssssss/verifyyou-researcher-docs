@@ -34,7 +34,7 @@ mode: "custom"
       <div className="vy-op-sheet vy-o-page">
         <h2 className="vy-o-sh1 text-gray-900 dark:text-zinc-50">Samples you can defend in peer review</h2>
         <p className="vy-o-ssub text-gray-500 dark:text-zinc-400">Verify each respondent is a unique, present human to ensure data quality.</p>
-        <a className="vy-o-dl" href="/images/humancheck-one-pager-r5.png" download="humancheck-one-pager.png"><Icon icon="arrow-down-to-line" iconType="light" size={13} />Download one pager</a>
+        <a className="vy-o-dl" href="/images/humancheck-one-pager-r6.png" download="humancheck-one-pager.png"><Icon icon="arrow-down-to-line" iconType="light" size={13} />Download one pager</a>
         <p className="vy-o-rowlabel vy-o-rowlabel-2">How it works</p>
         <div className="vy-o-hiw">
           <div className="vy-o-hiw-left">
@@ -102,8 +102,14 @@ mode: "custom"
               <path d="M295 53 L300 62 L305 53" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
             <div className="vy-o-forkrow">
-              <span className="vy-fork-pill vy-fork-pass"><span className="vy-fork-ic"><Icon icon="circle-check" iconType="light" size={14} /></span>Into your study</span>
-              <span className="vy-fork-pill vy-fork-fail"><span className="vy-fork-ic"><Icon icon="circle-xmark" iconType="light" size={14} /></span>Blocked</span>
+              <div className="vy-o-fcol">
+                <span className="vy-o-fwho"><span className="vy-viz-ico"><Icon icon="user-check" iconType="light" size={12} /></span>Verified humans</span>
+                <span className="vy-fork-pill vy-fork-pass"><span className="vy-fork-ic"><Icon icon="circle-check" iconType="light" size={14} /></span>Into your study</span>
+              </div>
+              <div className="vy-o-fcol">
+                <span className="vy-o-fwho"><span className="vy-viz-ico"><Icon icon="robot" iconType="light" size={12} /></span>Bots and repeat humans</span>
+                <span className="vy-fork-pill vy-fork-fail"><span className="vy-fork-ic"><Icon icon="circle-xmark" iconType="light" size={14} /></span>Blocked</span>
+              </div>
             </div>
             </div>
           </div>
