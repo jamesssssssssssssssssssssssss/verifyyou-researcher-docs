@@ -444,6 +444,15 @@
 .vy-viz-no { color: rgba(220, 38, 38, 0.85); background: rgba(220, 38, 38, 0.08); border: 1px solid rgba(220, 38, 38, 0.35); }
 
 /* Autoplay progress: a small glass track living on the front card's bottom edge */
+/* Mobile: grid/flex children default to min-width auto, so the un-wrappable mono passcode
+   forces the slide track wider than the card and text clips at the card edge. Let everything
+   shrink instead, and ellipsize the code if it truly runs out of room. */
+.vy-car-slide > * { min-width: 0; }
+.vy-viz, .vy-viz-field, .vy-viz-lane, .vy-viz-row { min-width: 0; }
+.vy-viz-code { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.vy-viz-out { flex: none; }
+.vy-onepager .vy-o-hb > div { min-width: 0; }
+
 /* Narrow-column carousel (How-it-works content column): single-column slides, tighter recede.
    Text and graphics sized up so the content fills the card rather than floating in it. */
 .vy-car-narrow .vy-car { height: 470px; }
@@ -460,6 +469,19 @@
 .vy-car-narrow .vy-viz-id { font-size: 0.92rem; }
 .vy-car-narrow .vy-viz-tag { font-size: 0.84rem; }
 .vy-car-narrow .vy-viz-pill { font-size: 0.84rem; }
+@media (max-width: 640px) {
+  .vy-car-narrow .vy-car-slide { inset: 0 20px; padding: 1.5rem 1.2rem 1.3rem; gap: 1.1rem; }
+  .vy-car-narrow .vy-car-slide[data-pos="1"] { transform: translateX(16px) scale(0.95); }
+  .vy-car-narrow .vy-car-slide[data-pos="2"] { transform: translateX(-16px) scale(0.95); }
+  .vy-car-narrow .vy-sp-text { font-size: 1.1rem; line-height: 1.55; }
+  .vy-car-narrow .vy-viz { padding: 1rem 1.1rem; gap: 0.6rem; }
+  .vy-car-narrow .vy-viz-code { font-size: 0.92rem; }
+  .vy-car-narrow .vy-viz-ico { width: 26px; height: 26px; }
+  .vy-car-narrow .vy-viz-out { font-size: 0.74rem; }
+  .vy-car-narrow .vy-viz-id { font-size: 0.8rem; }
+  .vy-car-narrow .vy-viz-tag { font-size: 0.72rem; }
+  .vy-car-narrow .vy-viz-pill { font-size: 0.72rem; }
+}
 
 .vy-car-prog {
   position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%);
@@ -660,6 +682,10 @@
 .vy-onepager .vy-o-forksvg { display: block; width: 100%; max-width: 340px; height: auto; color: rgba(127, 127, 127, 0.5); margin: 0.05rem 0 0.15rem; }
 .vy-onepager .vy-o-forkrow { display: grid; grid-template-columns: 1fr 1fr; justify-items: center; align-items: start; width: 100%; gap: 0.5rem; }
 .vy-onepager .vy-o-forkrow .vy-fork-pill { flex: none; font-size: 0.76rem; padding: 0.42rem 0.7rem; white-space: nowrap; }
-.vy-onepager .vy-o-fcol { display: flex; flex-direction: column; align-items: center; gap: 0.45rem; }
+.vy-onepager .vy-o-fcol { display: flex; flex-direction: column; align-items: center; gap: 0.45rem; min-width: 0; }
 .vy-onepager .vy-o-fwho { display: inline-flex; align-items: center; gap: 0.4rem; font: 600 0.72rem/1.2 Inter, sans-serif; color: #8a8f98; white-space: nowrap; }
-.vy-onepager .vy-o-fwho .vy-viz-ico { width: 22px; height: 22px; }
+.vy-onepager .vy-o-fwho .vy-viz-ico { width: 22px; height: 22px; flex: none; }
+@media (max-width: 640px) {
+  .vy-onepager .vy-o-fwho { white-space: normal; text-align: center; }
+  .vy-onepager .vy-o-forkrow .vy-fork-pill { white-space: normal; text-align: center; }
+}
